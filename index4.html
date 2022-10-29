@@ -194,6 +194,528 @@
              <h2 class="mb-4 d-flex justify-content-center">Nice to have but not super important is HEAD and ref 
                 behind the scenes
              </h2>
+
+             <h2>==========================</h2>
+             <h2><u>INTRODUCING BRANCHES</u></h2>
+             <h2>==========================</h2>
+             <h3>Every commit has a unique hash, and each commit references 
+                the commit that came before it. There is a linear history, but 
+                in the real world we need to work in multiple contexts simultaneously 
+                
+             </h3>
+             <h3>So imagine I'm working, I don't know, I work at some company, I'm working on a web application and
+                I'm trying out two different color scheme variations for a website.
+                 And I want to try them both out and figure out which one I like best.
+                 And at the same time, I also have been tasked with trying to fix a really horrible bug.
+                 <h3>
+                   But this bug is proving very difficult to solve 
+                I'm actually needing to delete some code and comment stuff out, move stuff around to try and hunt down
+                the bug.
+                So it's not as simple as just fixing a typo.
+                I have to like totally destroy part of the code base to find this bug.
+                </h3>
+                <h3>
+                 And at the same time, one of my teammates is working on adding a new feature, a little chat bot and
+                 the bottom corner.
+                 You know, those things that pop up and you can chat with customer service or something.
+                 It's not clear at the moment if our company wants to use that, but he's going ahead and trying it as
+                 a bit of an experiment.
+                 </h3>
+                 <h3>
+                 And then another coworker is adding some new functionality to the search bar autocomplete, and yet
+                 another developer is doing something very different.
+                 She is doing a very experimental radical design overhaul of our entire application layout, but it won't
+                  be presented until next month and we don't even know if any of it will be used after next month.
+                  So lots of different contexts.
+                  </h3>
+                  <h3>
+                 If we all worked in a linear fashion, one commit after the next, this would be practically impossible.
+                 How could we be working on separate things, some of which break other people's code?
+                Right.
+                If I'm trying to fix a horrible bug and deleting a bunch of code, removing files, I'm just making
+                a mess.
+                </h3>
+                <h3>
+                That's going to be a big problem if somebody else is trying to add a new feature.
+                Likewise, if someone is doing a radical experimental design change on every single view of our application,
+                everything changes.
+                </h3>
+                <h3>
+                But I'm trying to work on some minor color scheme variations, or if someone's working on adding a chat
+                widget to the bottom right of our screen.
+                Those things need to happen in separate contexts because they have implications on one another and they
+                really need to happen in isolation until maybe at some point we decide to incorporate changes into each
+                other's contexts.
+                </h3>
+                <h3>
+                So that is where branching comes in.
+                 That's exactly what git branches allow us to do.
+                 Branches are a signature feature of Git and you can kind of think of them as alternative timelines for
+                 a project.
+                 </h3>
+                 <h3>
+                They allow us to create separate contexts whenever we want.
+                We can try new things.
+                We can work on multiple ideas in parallel.
+                We can experiment, we can break stuff, and whatever we do on one branch will not impact what happens
+                on other branches, although we can decide to then combine branches, we call that merging and we'll
+                learn how to do that.
+                </h3>
+                <h3>
+                But that's something we have to decide to do.
+                Otherwise, if we make a change in one branch, the other branches do not know about it.
+                They exist in isolation.
+                So this allows me to make a commit and maybe make another commit on one branch and then at any point
+                splinter off and try something on this pink branch up top.
+                </h3>
+                <h3>
+                I'm calling New Color Scheme.
+                I could try a new color scheme out, but over here, if I switch back to this branch, none of that
+                code comes with me.
+                None of those new commits.
+                So I could branch off again and work on a bug fix.
+                </h3>
+                <h3>
+                But again, totally separate context.
+                And then I could branch off even further from this bug fix branch and branch further to do an experimental
+                redesign.
+                So now I have at least four different contexts one, two, three and four.
+                </h3>
+                <h3>
+                And this means that I could be working on this and maybe somebody else is working on this branch and
+                somebody else is working here or.
+                Maybe someone else is working on this purply bluish branch in the middle and working on things plotting
+                ahead.
+                </h3>
+                <h3>
+            Well, I'm still stuck here.
+                 We're all working in separate contexts, but then a very important part is being able to then combine
+                and merge branches together when appropriate.
+                </h3>
+                <h3>
+                If you work on a bug fix and you actually solve it, then you want to merge that bug fix into the main
+                code base or into another branch.
+                So we'll learn how to do all of this in time.
+                </h3>
+                <h3>
+                But I'm going to stop talking for now.
+                In this video, I just wanted to introduce this idea of branching, of having separate contexts.
+            </h3>
+            <h2>=================================</h2>
+            <h2><u>THE MASTER BRANCH/MAIN BRANCH</u></h2>
+            <h2>=================================</h2>
+    
+            <h3>
+                So we're always by default on the master branch,
+                we can change branches, but we'll always be 
+                working on a branch, it's just the main/default 
+                branch.
+            </h3>
+            <h3>When we first run git init on a new project/ 
+                repo the default branch we always start with is 
+                the master branch. Some developers treat the master/ 
+                main branch as the true branch but it's really just 
+                the default, you can make a different branch that's 
+                not the master/main as your default that you want to work 
+                with, but some devs will keep the master/main as their one 
+                true branch. 
+            </h3>
+            <h2><i>One branch to rule them all, One branch to find them,
+                One branch to bring them all, and in the darkness 
+            bind them. </i></h2>
+    
+            <h3>So the master/main branch can be deleted or renamed
+                or ignored entirely, it's up to the developer 
+            on how they want their default or main branch to be set up </h3>
+    
+            <h3>Also keep in mind the default branch name is supposed 
+                to be "Main", and not "Master", GitHub in 2020 renamed it 
+                officially but you'll still see "master" since the change 
+                was recent.
+            </h3>
+    
+            <h3>It's a common workflow to set a new branch to mess 
+                around and experiment with, and if it works, merge back to master 
+                or keep it as a separate branch while maybe eventually merging back
+            </h3>
+    
+             <h2>==========================</h2>
+             <h2>What is HEAD?</h2>
+             <h2>==========================</h2>
+             <h3>Let's explore what (HEAD -> master) is</h3>
+             <h3>HEAD is a pointer in Git, that refers to the current 
+                location in your repository, it points to a specific, 
+                branch reference, so far HEAD always points to the latest 
+                commit you've made, but we'll see that we can move around 
+                and the HEAD will change
+             </h3>
+    
+      <h3> 
+        Think of branches like bookmarks in a book, let's say you 
+        and a few friends are reading/sharing the same book. Your 
+        bookmark is blue, your friend John has a red bookmark, Jane 
+        has a green one, and Mr.Smith has a teal one, at any given point 
+        in time, each bookmark is unique to the person who's reading, 
+        but we can view Johns branch or bookmark, or anyone who's reading 
+        that same book, and the HEAD will change depending on who's branch 
+        your currently viewing
+      </h3>
+      <h3> So to reiterate HEAD is a pointer/reference to a 
+        branch pointer/reference, and a branch pointer is a 
+        pointer/ reference to where the bookmark is in a book. We 
+        can have many branches/bookmarks and each one has a branch 
+        reference/pointer that shows where it is.
+      </h3>
+      <h3>So after every commit we make, we're on the same branch 
+          but we can make new branches which we'll go over soon, 
+          but when we switch to a new branch the HEAD follows us 
+          there, Master/main branch still exists but HEAD is now 
+          pointing to us, where we are with are new branch.
+      </h3>
+      <h3>But we can always go back to the main branch, then head will now 
+        be pointing back at master/main , HEAD is just the current branch 
+        we are working with.
+      </h3>
+    <h2>==========================================================</h2>
+    <h2>Viewing all existing branches with "git branch" command</h2>
+    <h2>===========================================================</h2>
+    
+    <h3>We can view all branches using the command "git branch", 
+        the default branch in every repo is "Master/Main", though 
+        we can change this.
+    </h3>
+    <h3>So we can type "git branch" and it shows the 
+        result '* Master' since we are currently in the 
+    master branch  </h3>
+    <h3>But the * just indicates the branch we're inside of, 
+        we could have four or five branches like: Master, John's bookmark, 
+        Jane's bookmark, Mr.Smiths bookmark and if we're in Jane's bookmark 
+        it would say * Jane's bookmark, because Jane's bookmark is 
+        the branch we're currently inside, the branch w/ the asterisk 
+        * next to it is our current branch.
+    </h3>
+    <h2>=================================</h2>
+    <h2>Creating Branches</h2>
+    <h2>=================================</h2>
+    <h3>To create a new branch we actually use the same command 
+        'git branch' but we add a branch name after so it would be:
+        'git branch "Johns_bookmark"
+    </h3>
+    <h3>Keep in mind we should use snake_case or camelCase 
+        to name branches, avoid using spaces in branch names
+    </h3>
+    <h3>Also bear in mind when we create a branch we do not 
+        automatically go inside it, we have to change branches with 
+        the command git branch + branch name 
+    </h3>
+    <h3>So I just made a new branch called 'notes_branch' 
+        using git branch 'notes_branch', then did git branch and 
+        it was created, underneath master branch, there is my 
+        newly created branch notes_branch, but keep in mind HEAD 
+        is still pointing to "Master" because we have not switched 
+        branches yet
+    </h3>
+    <h2>--------git switch--------</h2>
+    <h3>
+    We use the command (git switch + branch name) to switch 
+    to the specified branch, and voila, we're on a new branch, and HEAD is now pointing to 
+    the new branch
+    </h3>
+    <h3>Now when I type git status after using the command 
+        git switch notes_branch it displays on branch notes_branch
+    </h3>
+    <h3>So i just did git commit -m"test new branch commit"
+        this commit was made on our new notes_branch branch, 
+    </h3>
+    
+    <h3>Now after we type git log, we see that we left the 
+        master branch behind, our last commit is separate from our 
+    main/master branch, but like a bookmark, the master branch we left 
+    is still there, just as we left it, but we can switch back like we 
+    did before using git switch master
+    </h3>
+    <h3>And yes after switching back to master branch lines 821 to 
+        839 disappeared from VsCode because this content I'm currently 
+        typing is unique to this branch, the notes_branch of my 
+        repo
+    </h3>
+    <h3>We're going to practice creating more branches, BUT KEEP IN MIND 
+        WHERE YOU ARE/ WHERE THE HEAD IS POINTING TO WHEN 
+    YOU CREATE BRANCH MATTERS, if we use git branch notes_branch_two 
+    while head is pointing to notes_branch, notes_branch_two is a branch of notes_branch
+    not master, so where you use the branch command MATTERS </h3>
+    <h3>Okay so we just created a branch from a branch from a branch... 
+        Remember notes_branch was a branch from master branch, now 
+        we're inside notes_branch_two which is a branch off of notes_branch,
+        which was a branch off of master. Branches from branches from 
+        branches.
+    </h3>
+    <h2>============================================</h2>
+    <h2>git switch vs git checkout, the differences</h2>
+    <h2>============================================</h2>
+    
+    <h2>Historically we used git checkout + branch name, and 
+        it still works but git checkout does many extra things than 
+        git switch, which is the reason git switch was created, 
+        keep in mind you'll see git checkout used frequently 
+        in older documentation/tutorials, some future co-workers 
+        may use git checkout.
+    </h2>
+    <h3> So I just created a new branch then used git checkout to 
+        change into it. And yes it works the asterisk is pointing to 
+        my new_checkout_branch_test branch I just created
+    </h3>
+    <h3>
+        So if you go to the official Git documentation there are many 
+        more things git checkout does, we'll go over some of them later 
+        but for now just know that git switch is how we usually 
+        change branches
+    </h3>
+    <h2>==========================================</h2>
+    <h2>Creating and switching in one command</h2>
+    <h2>==========================================</h2>
+    
+    <h3>We can create and switch to the newly created branch 
+        with the '-c' flag right before our branch name, so it would look 
+        like this: git switch -c switch_and_changed_branch
+    </h3>
+    <h3> To achieve the same using git checkout the command would 
+        be: git checkout -b "branch-name-here", we use -b flag instead 
+        of -c flag 
+    </h3>
+    
+    <h3>Keep in mind if we're on a branch that's not 
+        currently committed, and we try to switch, we'll get an error 
+        that says "please commit or stash your changes", we'll learn 
+        about stashes later but for now just know git will throw an 
+        error if you try to switch without committing. 
+    </h3>
+    <h3>Also if you create a new file on your new branch, and forget 
+        to commit, that file will follow you around, it won't throw 
+        that error we got above, if you create a file in switch_and_changed_branch 
+        then change to master branch, the file you created will follow 
+        you there
+    </h3>
+    <h2>=================================</h2>
+    <h2>Deleting and renaming branches</h2>
+    <h2>=================================</h2>
+    <h3>We use the git branch command again but instead we 
+        append the -d flag with the corresponding branch 
+    we want to delete </h3>
+    <h3> So I just switched to notes_branch_two and created 
+        a new branch, then deleted it using the -d flag, I didn't 
+        receive the same error colt did, Colt had an error pop up 
+        that said: branch is not fully merged, run git branch -D 
+        to delete, I guess uppercase -D is the force command to delete 
+        branches if error messages pop up
+    </h3>
+    <h3>Let's go over how to rename branches</h3>
+    <h3> To rename it we use git branch + -m on the branch we 
+        want to rename, yes it is the -m flag similar to 
+        git commit -m for message but in this case -m refers to 
+        'move/rename', Remember we have to be on the branch to rename it 
+        I'm going to rename switch_and_changed_branch to switch_and_changed_branches 
+        Okay it worked but we need to omit the "", using -m to 
+        rename a branch, don't wrap the new name in ""
+    </h3>
+    <h2>=======================================</h2>
+    <h2>How git stores HEAD behind the scenes</h2>
+    <h2>=======================================</h2>
+    <h3>Okay so the below section is a direct transcript, colt goes over HEAD and how it stores hash references to commits made on 
+    certain branches.</h3>
+    <h3>
+    We're going to take a look at that dot git directory and I'll show you proof of head how it works.
+    The fact that it's just referencing a branch and that each branch reference is referencing a commit.
+    All right.
+    So let's go ahead and hop over here to our road trip playlist.
+    We are on this 2000 branch.
+    Let's go back to master.
+    So get switch master and on master.
+    It's very simple.
+    We have two commits and that's it.
+    And we can see that head is referring to master because we're on the master branch and the master branch
+    is pointing to this commit.
+    This is the most recent commit on the tip of the master branch.
+    Let's take a look at this commit hash.
+    It starts with 93e.
+    Let's just remember that 93ed 93 OC.
+    So remember that.
+    And now remember we have this hidden directory called Git and inside of it I'll just seed inside seed
+    dot git.
+    We have this thing called head and head.
+    If I take a look I'm just going to use the cat command is referencing this other thing refs slash heads
+    slash master.
+    </h3>
+    <h3>
+    So in other words this is I'll simplify it head is pointing to the master branch if I switch branches
+    get switch oldies whoops can't do that from here.
+    I have to back out now if I switch because I was in the docket directory, gets very confused, get
+    switched to oldies and now I take a look again.
+    So I'll do cats dot git slash head.
+    I'm now outside that folder.
+    See this?
+    It now references oldies.
+    So if I switch back to Master.
+    And I take a look at head.
+    It's now master.
+    So that thing, that file called Head is just referencing a particular branch.
+    Now this thing here, refs slash heads slash master or refs slash heads slash oldies right here.
+    They actually reference a particular commit.
+    </h3>
+    <h3>
+    So let's take a look.
+    I'm going to open up the docket directory now.
+    I've opened up the git directory just in finder here and let's take a look at this.
+    Refs slash heads slash master.
+    So refs heads and you'll see there's a file for every branch that I have.
+    And in each one of these files, there's just one thing.
+    I'm going to open it in my text editor.
+    It's just a commit hash it's just a pointer to a particular commit and head in turn is pointing to one
+    of those branch references.
+    So remember head was reps, slash heads, slash master.
+    That's what it had inside.
+    And then if we look at what that actually is.
+    It's a comet 93 E RD.
+    That is where the master branch left off.
+    That's where the bookmark for master branches.
+    Now, if I switch to the oldest branch, nothing changes in this master reference.
+    Right.
+    But we know that my head changed so we could take a look at that again.
+    Cat dot get slash head.
+    There it is.
+    Head slash oldies and if we look at that.
+    All this.
+    It says the last commit on the oldest branch is seven FD and if we type git log, that's exactly what
+    we see.
+    Seven FD.
+    Right, so we can see that all over the place.
+    I have this 2000 branch and it says the last commit on there zero to F four OC.
+    And so if we switch to that branch get switch two thousandths.
+    Typekit log.
+    There it is.
+    There are 2f4.
+    So each one of these is like a bookmark.
+    It's one of these branch references.
+    </h3>
+    <h3>
+    So we happen to have what, five of them instead of two?
+    In this diagram, each one refers to a commit.
+    It just stores that commit hash in a file and then head changes.
+    This file right here changes depending on what we have checked out, which branch we're currently on.
+    So again, this really doesn't matter if you understand it or not.
+    In terms of using Git, it's not a big deal as long as you understand the fact that head is just whatever
+    you're currently checked out on, whatever you're what branch you're on.
+    But behind the scenes, this is the mechanism.
+    It's just a file and it references a particular branch reference.
+    We look at those branch references, they in turn refer to a particular commit.
+    </h3>
+    <h3>
+    So pretty simple when you look at it this way.
+    So hopefully this diagram plus this starts to sort of congeal branch reference points to a commit,
+    this one points to a different commit head, just points to one of those branch references so we can
+    stay on dark mode or I could toggle back to master, but these stay the same.
+    The branch reference, they both stay the same head is all that's changing until I do more work and
+    make new commits anyway.
+    So the optional I'm sure I'm boring you to death, so I'm going to stop.
+    </h3>
+    <h2>===================</h2>
+    <h2>MERGING BRANCHES</h2>
+    <h2>===================</h2>
+    <h3>
+        In this section we'll see how we merge branches, and there are 
+        different types of merges, here's an overview of each section 
+        based on importance.
+    </h3>
+    <h2> Critical importance:
+        <ul>
+            <li>Fast Forward Merges</li>
+            <li>Git Merge and Merge commit commands</li>
+            <li>Resolving merge conflicts</li>
+        </ul>
+    </h2>
+    <h2> Nice to know but not critical:
+        <ul>
+            <li>
+    Using VsCode to resolve conflicts
+            </li>
+        </ul>
+    </h2>
+    <h3>
+        Now let's get into it, how do we merge branches, an essential 
+        thing we must learn, to do this we use the git merge command
+    </h3>
+    <h3>
+        This is a common part of git workflow especially when working 
+        on a team, you're going to be using git merge frequently 
+        in a developer role. 
+    </h3>
+    <h3>
+        So a big thing to know is that we don't ever experiment 
+        merging with master until a feature is 100% approved to 
+        merge back to master branch, you'll leave master alone 
+        until your "feature branch" or branch you're editing 
+        has been completely fleshed out and approved for a merge.
+    </h3> 
+    <h3>
+        So everyone at X company works on their own unique 
+        feature branch, your co-workers will have their own 
+        branches that they're editing for a specified task same 
+        as yourself, then maybe you'll merge branches at some 
+        point.
+    </h3>
+    
+    <h3>
+        Remember we merge branches themselves, not commits, and we always merge 
+        to the current HEAD branch
+    </h3>
+    <h3>
+        When we want to merge, we follow these steps:
+        <ol>
+            <li>
+                Switch into the branch you'd like to merge the changes 
+                into(the receiving branch) using git switch command: git switch 
+                master
+            </li>
+       <li>
+        Use the git merge command to merge the changes from a specific branch 
+        into the current branch, which from above would be master: git merge bugfix
+    
+       </li>
+        </ol>
+    So it's essentially: git switch into the branch you want to merge changes 
+    into, then once inside the selected branch, use git merge bugfix or git merge + 
+    branch name we want to merge into master
+    </h3>
+    <h3>Okay so it does work, going to merge into master again</h3>
+    <h2>
+        Testing out the fast forward merge in git
+    </h2>
+    <h3>
+        So right now I'm in a new branch, not master, these last few lines from 
+        1100 to 1105 are unique to this branch so let's merge these changes 
+        into Master, let's try it out now
+    </h3>
+    <h3>
+        Keep in mind not all merges are fast forward merges, for example if 
+        someone made changes to master before you did, then you try to merge 
+        your branch to master... well master's been changed since you were 
+        last there, so now there's new info there, so Git may not be able 
+        to do this automatically for us, we will need to resolve these conflicts.
+    
+    </h3>
+    <h3>
+        The easier way of doing this is through VsCode since it has a handy 
+        dandy input that'll display when merge conflicts arise, we could also 
+        manually go into the files and make the changes so that Git will merge 
+        without conflicts, but utitlizing VsCode seems to me, at least right 
+        now, to be the easier of the two.
+    </h3>
+    <h3>
+        Okay so the exercise went well, I completed all of colts challenges,
+        successfully generated a FF(fast forward) merge, generated a merge 
+        without conflicts, and generated a conflicted merge and resolved it.
+    
+    </h3>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
       integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
