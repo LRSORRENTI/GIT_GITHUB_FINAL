@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/HOME/style.css" />
+    <title>Github grab-bag: Odds and Ends</title>
+  </head>
+  <body>
+    <nav class="navbar sticky-top navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Dropdown link
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <h2><u>GitHub grab bag: Odds and ends</u></h2>
+
+<h2>Critical:</h2>
+<h3>
+    <ul>
+        <li>
+            Repo visibility: Private vs Public
+        </li>
+        <li>
+            Adding GitHub collaborators
+        </li>
+        
+    </ul>
+    Important:
+    <ul>
+        <li>
+            README files
+        </li>
+    </ul>
+     Nice to have: 
+     <ul>
+        <li>
+            Writing markdown
+        </li>
+        <li>
+            GitHub Gists
+        </li>
+        <li>
+            GitHub pages
+        </li>
+     </ul>
+</h3>
+
+<h2>
+    GitHub repo visibility: Public vs Private
+</h2>
+
+<h3>
+    On GitHub we can make the visibility of any repo public or private,
+    when we create a repo, GitHub will prompt you to make it public or 
+    private.
+
+</h3>
+
+<h2>
+    Adding GitHub collaborators
+</h2>
+
+<h3>
+    When we add collaborators, we allow others to be able to push 
+    changes to the given repo, when a repo is public, anyone can take 
+    the repo and clone them, make changes/commits, but they can't 
+    push those changes back up to GitHub
+</h3>
+<h3>
+    To add a collaborator, inside of our repo settings, we can go to 
+    the 'manage access' tab, and add direct access collaborators, we 
+    then enter the persons GitHub user name/ email, then all that 
+    person needs to do is accept the invite and voila, collaboration
+    is now enabled between you and that person
+</h3>
+<h2>
+    The GitHub collaboration demo
+</h2>
+<h3>
+    Okay in colt's demo he's showing two users collaborating on a 
+    project, first user is Colt, second user is Stevie,
+    Colt initializes the repo, adds some text to the file, 
+    then pushes the file to GitHub
+</h3>
+<h3>
+    Then Stevie clones the repo, sees the text inside the file, adds 
+    some extra text to the file, then pushes back to GitHub
+
+</h3>
+<h3>
+    Now Colt can see stevie pushed some work to GitHub, there are 2 commits 
+    now, so Colt can use git pull, or git fetch, to bring those changes down 
+    to his machine
+</h3>
+<h3>
+    That's the basic GitHub collaboration workflow, you and your teammates ,
+    make changes, push them to GitHub, then you can bring those changes 
+    to your machine with git pull or git fetch
+</h3>
+
+<h2>What are READMEs and why they're important</h2>
+<h3>
+    A README file is used to communicate important information about 
+    a given repository including:
+</h3>
+<h3>
+    <ul>
+        <li>
+            What the project does
+        </li>
+        <li>
+            How to run the project
+        </li>
+        <li>
+            Why it's noteworthy
+        </li>
+        <li>
+            Who maintains the project
+        </li>
+    </ul>
+</h3>
+<h3>
+    READMEs play an important role, it's often the first 
+    thing someone looks at when they're viewing your project, and if you put 
+    the README.md in the root of your directory, GitHub 
+    will display it automatically
+</h3>
+<h3>
+    For reference the .md stands for 'markdown', markdwon files are 
+    convenient syntax to generate formatted text, and it's easy to use
+</h3>
+
+<h3>
+    Markdown itself is a 'text to HTML' conversion tool for web writers,
+    markdown allows you to write and easy-to-read, easy-to-write plain 
+    text format, then convert it to structurally valid XHTML or HTML
+</h3>
+
+<h3>
+    Markdown is not specific to GitHub, people use markdown all over 
+    the place, there are tools to write and render markdown yourself, 
+    VSCode extensions, standalone applications
+</h3>
+<h3>
+    Check this link for full guide to markdown: https://markdown-it.GitHub.io/
+</h3>
+<h3>
+    So just like HTML there are headings: h1, h2, h3, h4, h5, h6,
+</h3>
+<h3>
+    For an h1 we write the markup with a '#' followed by space, then our text,
+     for h2 it's two '#' , for an h3  it's 3 '#' and so on
+</h3>
+<h3>
+    Okay so now I'm going to create a README for this file
+</h2>
+<h3>
+    Okay just created a basic README file, added and pushed it to 
+    GitHub, added the link from above there as well, it's a great 
+    guide to creating visually appealing README files
+
+</h3>
+
+<h2>GitHub Gists</h2>
+<h3>
+    GitHub gists are a simple way to share code snippets and 
+    useful fragments with others. Gists are much easier to create 
+    but offer far fewer features than a typical GitHub repository
+</h3>
+<h3>
+    All we need to do is use .html, .js, or .md and the gist will 
+    show it as a HTML file, JS file or README.md file
+</h3>
+<h2>
+    GitHub Pages
+</h2>
+<h3>
+    What are GitHub pages? GH pages are public webpages that are 
+    hosted and published via GitHub, they allow us to create a website 
+    by simply pushing your code to GitHub
+</h3>
+
+<h3>
+    So we can easily host webpages on GitHub, there are restrictions, 
+    it DOES NOT support server-side code like Python, Ruby, or Node.
+    Just HTML/CSS/JS! Static webpages only. It's free and it's built into 
+    GitHub itself
+</h3>
+<h3>
+    There are two types of GitHub pages:
+</h3>
+<h3>
+    <ul>
+        <li>
+            User Site
+        </li>
+        <h3>
+            You get one user site per GitHub account, this is where 
+            you could host a portfolio site or some form of personal 
+            website, the default url is based on your GitHub username,
+            following this pattern: username.github.io, though you 
+            can change this
+        </h3>
+        <li>
+            Project sites
+        </li>
+        <h3>
+            You get unlimited project sites! Each GitHub repo 
+            can have a corresponding hosted website. It's as simple 
+            as telling GitHub which specific branch contains the 
+            web content. The default urls follow this pattern: 
+            username.github.io/repo-name
+        </h3>
+    </ul>
+</h3>
+
+<h3>
+    Now let's demonstrate how to create a GitHub page, 
+    from your project, go to settings, navigate down to pages, 
+    select build and deply from whichever branch you want to display, then 
+    after a minute or two it loads and it will display: 'Your site is 
+    live at username.github.io/projectname'
+</h3>
+<h3>
+    Github has great documentation to getting everything set up, 
+    so for future reference looking at their documentation will 
+    help set up your github hosted static webpage
+</h3>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+      integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
