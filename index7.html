@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/HOME/style.css" />
+    <title>Intro to GitHub</title>
+  </head>
+  <body>
+    <nav class="navbar sticky-top navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Dropdown link
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <h2><u> Intro to GitHub</u></h2>
+    <h2>
+      Critical:
+      <ul>
+        <li>What does GitHub do?</li>
+        <li>Cloning</li>
+        <li>Registering to GitHub and setting up SSH keys</li>
+        <li>Creating GitHub repos</li>
+        <li>Working with remotes</li>
+        <li>Git push</li>
+      </ul>
+    </h2>
+    <h2>What does GitHub do for us?</h2>
+    <h3>
+      GitHub is a hosting platform for git repositories, you can add your repos
+      to GitHub and access them on any computer anywhere, as well as share them.
+    </h3>
+    <h3>
+      GitHub also provides additional collaboration features not native to git,
+      but are very useful, in essence GitHub helps people share and collaborate
+    </h3>
+    <h3>
+      Also gitbub is the home of open source projects, this is a good way of
+      getting experience working on a project with others.
+    </h3>
+    <h3>
+      GitHub can help show that you know how to work/collaborate on things, it
+      can be a good way of showing to potential employers that you know how to
+      collaborate well, and know how to help with projects
+    </h3>
+    <h2>Cloning</h2>
+    <h3>
+      We use git clone to go and get a repository that's not on your machine and
+      brings it to your machine. Basically downloads the contents of a repo from
+      a url
+    </h3>
+    <h3>The command itself is: git clone https://GitHub.com/blah</h3>
+    <h3>
+      Also keep in mind we can also clone a repo from any website that has a
+      public repository, for ex on Gitlab there are some public repos to clone,
+      instead of a GitHub url, it would be gitlab.com/randomrepo
+    </h3>
+    <h2>SSH Config</h2>
+    <h3>
+      SSH stands for Secure Shell, and an ssh key is used for authentication,
+      for things like pushing to a repo from your local machine, your terminal
+      will prompt you for your GitHub email/password every time unless you set
+      up your SSH key
+    </h3>
+    <h2>Creating a repo</h2>
+    <h3>If you have repo you'd like to push to GitHub, here are the steps:</h3>
+    <h3>Option one:</h3>
+    <ol>
+      <li>Create a new repo on GitHub</li>
+      <li>Connect your local repo (add a remote)</li>
+      <li>Push your changes to GitHub</li>
+    </ol>
+    <h3>Option two if you've not done work on your local repo yet:</h3>
+    <ol>
+      <li>Create new repo on GitHub</li>
+      <li>Clone it down to your machine</li>
+      <li>Do some work locally</li>
+      <li>Push changes back up to GitHub</li>
+    </ol>
+
+    <h2>Remote</h2>
+    <h3>
+      The next thing we need to do is take an empty GitHub repo, and configure
+      it so that it knows about our local repo, we do this with a remote, like a
+      destination url, like a label, so we can fetch code
+    </h3>
+    <h3>
+      To view any existing remotes you may have you can use the git remote or
+      git remote -v (v stands for verbose, use for more info) if we haven't
+      added any remotes, it will display nothing
+    </h3>
+    <h3>
+      We use the command: git remote add name url, a standard name is git remote
+      add origin https://GitHub.com/blah/repo.git
+    </h3>
+
+    <h3>
+      We can also rename / remove our remotes with the following commands:
+    </h3>
+    <ul>
+      <li>git remote rename "name-here" "new-name-here"</li>
+      <li>git remote remove "name-of-remote-to-remove"</li>
+    </ul>
+
+    <h2>Intro to pushing</h2>
+    <h3>
+      Now that we have a remote set up let's push some stuff to GitHub, to do
+      this we use the git push command
+    </h3>
+    <h3>
+      We must specify the remote we want to push up to AND the specific local
+      branch we want to push to the remote
+    </h3>
+    <h3>
+      The command is: git push "remote-name" "branch name", for this repo it
+      would be git push origin master
+    </h3>
+
+    <h2>
+      The next few lines are direct copies of the transcript of colt's video
+    </h2>
+    <h3>
+      Okay. So let's talk about how we actually get our code up on GitHub. How
+      do we take a local git repo on our laptop? And how do I connect that in
+      some way to a hosted GitHub repo? How do I connect them? How do I set up
+      the repo on GitHub? And then what do I do on my machine to tell it about
+      the GitHub repo? Well, there's really two different approaches or two
+      options that I'm going to walk through in this video. I'm just going to
+      talk about both of them and just explain how they work and then we'll dive
+      into actually doing them.
+    </h3>
+    <h3>
+      So the first option called option one is if you have an existing repo on
+      your machine, if you have something that you've already been working on,
+      it already has git history, you already have code, whatever it is, and you
+      want to get that on GitHub. These would be the steps that you follow. You
+      create a new repo on GitHub, then you connect your local repo by adding
+      something called a remote. We'll go into that. So you add that remote to
+      your local machine and then you push your changes up to GitHub. So here's
+      some diagrams.
+    </h3>
+    <h3>
+      If I have something I've been working on, whether it's just a day of work,
+      an hour of work, an empty repository that I've created or years of work,
+      whatever it is, if it's on my machine and not on GitHub, I go on to GitHub
+      and I make a new empty repository. I'll show that in just a moment to. So
+      once I make that new empty repository, then what I do is tell my computer.
+      Specifically tell this git repository about the GitHub repository. And
+      then I can push my code up to the GitHub repo. The other option is if I
+      don't have anything done yet, I don't have a repo anywhere. I know I want
+      to start a project and I know right out of the gate that I also want to
+      use GitHub alongside Git. If that's the case, I can start on GitHub, make
+      a new repo on GitHub and clone that down to my machine as an empty
+      repository.
+    </h3>
+    <h3>
+      Instead of running git init I can clone down my GitHub repo that's empty
+      and start working in that repo and then push it up to GitHub. And if I do
+      it that way, I don't have to manually connect my local repo to my GitHub
+      repo because if I clone this repo from GitHub, it automatically is
+      connected to that GitHub URL. So some diagrams to illustrate that. I don't
+      have any repositories yet either on GitHub or on my machine. And I start
+      by making a new repo on GitHub, which I'm visualizing is this empty
+      container, and then I clone that down to my laptop. And because it came
+      from this clone, it automatically knows about this GitHub URL. So now I
+      can do my work locally and push it up. I don't have to connect them in any
+      way, but I'm going to actually start by showing you the other option.
+      Option one, because you may have some existing code. I mean, we certainly
+      have existing repos from the course. None of them are very useful, but we
+      have existing repos. Right.
+    </h3>
+    <h3>
+      We've been working with Git and let's talk about how to get that on
+      GitHub. So to do that, the first step is to make an empty GitHub repo. So
+      if you want to follow along, start by just picking some git repository
+      that we've made or that you've made that you want to get on GitHub. So it
+      doesn't have to be something that you make public and it doesn't have to
+      be something that you keep up there, right? You can delete it or get rid
+      of it immediately if you don't want people to see it.
+    </h3>
+    <h3>
+      So we've done quite a few different repositories. Why don't I just take
+      that really simple book repository? My first novel. All right. So it's a
+      disastrous repo. I'd like to get all of this up on GitHub. All right. All
+      this history, all my files. One more time. This is what I'm dealing with.
+      So whatever you have found, if you have a repo you want to follow along
+      with, the first step is to go on GitHub.
+    </h3>
+    <h3>
+      So once you're signed in and create a new empty repo and there's a couple
+      of buttons to do that, one is just this green button if you're on the home
+      page new or if you're somewhere else like I'm on Marketplace. If I click
+      the plus new repo right there, then I see this page create a new
+      repository. So we need to come up with a name about GitHub, demo, novel or
+      something like that. This is just a name that we'll use to identify it on
+      GitHub, right? It doesn't have to match anything from our actual
+      repository that we have locally, but we don't want spaces. It will
+      automatically add dashes for us. I don't know, I just put them in there
+      myself. But we don't need to do that.
+    </h3>
+    <h3>
+      You don't really need a description, although you should put one in,
+      especially if you plan on having other people see this repo or discover
+      it. But we will talk more about that to keep this short and simple. I'm
+      not going to put a description in there and then we can decide if it's
+      public or private. Now, I'm going to keep this public in case some of you
+      want to take a look at the repo, although, frankly, for the contents of
+      this book, it's probably best for my reputation if I do make it private.
+      That just means that if someone looks at my profile, if they search,
+      they're not going to find this repository. They don't have access to it.
+      But if it's public, anyone can see it. And then I'm not going to touch
+      this.
+      <h3>
+        We will come back and talk more about these files later. I'm just going
+        to click Create Repository. And did I click? I might have not. I guess I
+        didn't click. And we now see this page here. So my username, Colt Slash
+        and then the repository name, and then inside of it. There's not really
+        anything to look at right now except for a couple of instructions. All
+        right, so I'll stop here. We've made an empty GitHub repository. Our
+        local repo knows nothing about it. They're not connected in any way, but
+        that's going to change in the next video.
+      </h3>
+      <h2>GIT REMOTE SETUP</h2>
+      <h3>
+        All right. So the next thing that we need to do is take this empty
+        GitHub repo that's in the cloud. It's not connected at all to our local
+        repo and somehow configure our local repo so that it knows about this
+        GitHub repo.
+      </h3>
+      <h3>
+        Well, the way that we do this, whether we're using GitHub or any other
+        service that hosts the repo, is to set up a git remote. So a remote is
+        really just a fancy name for like a destination URL. It's a URL that we
+        tell get about and we give it a name. It's just like a label for a URL
+        that we can then push code up to or fetch or pull down new code from.
+      </h3>
+      <h3>
+        So we'll learn about those commands once we set up a remote. So an easy
+        place to start is with this command git remote or get remote dash v.
+        They won't do anything except list to you the current remotes that you
+        have in a repository. So in our repository we have not configured any
+        remotes. Right? At this point. We haven't done anything with remotes. If
+        I type git remote or git remote V, I'm in my book, my first novel, The
+        Great Gatsby repo nothing. But if we actually go to any of the repos
+        that we cloned, if you follow a followed along, I cloned this 2048 repo
+        from GitHub. Remember this one it has a whole bunch of commits it's that
+        addicting 2048 game anyway if I type get remote in here I see something
+        now origin we'll talk about that in a moment.
+      </h3>
+      <h3>
+        Let's do dash v so you can see the difference. If I do dash v, I think
+        it's verbose. We see the name of of a remote and the corresponding URL.
+        So I didn't set this up right. All I did was get clone and then this URL
+        and by doing that get made me a local repo. It put all these files in
+        here, it gave me all the history and it set up a remote that said the
+        original GitHub URL that this repo came from, that it was cloned from IS
+        right here. So by setting this URL up, this remote origin, it gives me
+        the ability later on to say, Hey, Git, is there any new code on that
+        URL? Is there any new updates? Or if I was a collaborator, hey git, I'd
+        like to push up my new ten commits.
+      </h3>
+      <h3>
+        It's kind of a lot to push up, but I'd like to push my new two commits
+        that I did today up to Origin. So I'll just show you one more example.
+        If I take a look at that see sample project that was the one that I
+        cloned in the second video I did. It's really very simple. Nothing in
+        it. It came from was it Bitbucket? I believe if I do get remote V No,
+        git lab. Sorry, it was a non GitHub repository. The same thing is true.
+        Right. I have a remote called origin automatically set up. I didn't do
+        that and it set to whatever I cloned or whatever the URL is that I
+        cloned it from. Okay. So we did not clone this repository, right? My
+        first novel, we we ran getting it. We created it from scratch. So there
+        are no remotes, but we can make a remote using this command, get remote
+        add and then a name and a URL. So this is a way of telling git hello
+        gets. Please remember this URL using this name. So whatever the name is
+        that we provide. So a really standard name is origin.
+      </h3>
+      <h3>
+        So get remote, add origin and then some GitHub URL for a GitHub repo
+        that we've created is telling git. Hey, here's a URL, I'm going to call
+        it origin. You remember that anytime I refer to origin, I'm talking
+        about this URL. So the term origin, it's just a conventional git remote
+        name, but it's not special in any way. No magical powers. It doesn't
+        have any secret abilities. It's just a name for a URL you could rename
+        them. You can come up with whatever names you want for remotes, but
+        origin is what you'll see all the time, similar to how the master branch
+        is a default name or the default name for branches, you can change it to
+        anything. So in the same way that master is just a name for a branch
+        origin. It's just a conventional name. You'll see it a lot, but it is
+        not somehow special. It's just a name for a remote.
+      </h3>
+      <h3>
+        So we could instead add a new remote for the same URL, but instead call
+        it my GitHub URL or lol or chickens are my friends, whatever you want,
+        but I would suggest origin because it's what you'll see the most and
+        then a URL. And actually if we go to the GitHub repository that we
+        created that's empty, we see some instructions. It's telling us, first
+        of all, if you've done this thing before, this kind of thing before,
+        here's a URL that is the URL for my repo. I hope this goes to that.
+        Saying you should be using your URL, right?
+      </h3>
+      <h3>
+        Not my repo because you won't have permission to push your code up to my
+        repository. So I hope you made your own. If you're following along then
+        it's telling me if you don't have a repo yet on the like at all locally,
+        follow these instructions. But I do. So I'm not following those. This is
+        what we want. Push an existing repo from the command line and take a
+        look at the very first line. Get remote, add origin and then the URL for
+        my git repo. It's the same URL we see here, so I'm going to copy that or
+        just copy the whole line. It doesn't really matter. I guess I'll
+        separate it out just to hit the point harder here. So I'm on the my
+        first novel repository right now. No remotes now get remote add and then
+        a name. I'm going to go with origin. It's conventional.
+      </h3>
+      And then this GitHub URL, whatever your GitHub URL is for that repo. Now
+      nothing really happens. But of course we can check our work with what we
+      just saw get remote v. So hopefully we see origin set up to this URL and
+      it is. So that's kind of all we need to do for now. We've connected. We've
+      told our local git repo about a GitHub URL called Origin or that's the
+      name that will refer to it by.
+      <h3>
+        So in the next video, I'll show you how we can push code up to origin. I
+        just want to emphasize one more time, it's just a name for a URL, a
+        remote destination, and this is not super common, but if needed you can
+        rename a remote with this command, get remote, rename the old name,
+        space, new name and you can get rid of a remote with git remote remove
+        and then the name that you're trying to delete. And later on we'll
+        actually see that it's somewhat common to have multiple remotes,
+        especially when you're working on open source projects. We'll talk about
+        workflows and how that would work when we get to that section.
+      </h3>
+
+      <h2>Intro to Git Push</h2>
+      <h3>
+        So we have one more step to get our code up on GitHub. We just need to
+        push it up. So if you remember option one, what we're following
+        here.Option one out of two is to create a new repo on GitHub, which
+        we've done. Connect the local repo by adding a remote to our GitHub
+        repo. We just did that in the previous video. Now we need to push our
+        changes up so we have our existing repo. I'm doing that stupid Great
+        Gatsby novel fake repo. I created an empty GitHub repo and then I set my
+        remote called Origin so that it points at this empty GitHub repo. So the
+        final step is to push up. So we do this using the git push command.
+      </h3>
+      <h3>
+        Again, this is not GitHub specific though. Everything will be pushing to
+        will be a GitHub repo, but the get push command is a git command that
+        existed long before GitHub. And there are many other places where you
+        can have a hosted repo that you can push to. So it works with any
+        remote. Basically the syntax is git push and then a remote.
+      </h3>
+      <h3>
+        In our case we just have one which is origin, but we can have multiple.
+        So we have to tell git where we're pushing, what's the destination
+        repository and what branch to push. So, you know, we might have a really
+        large repo with a ton of branches. Like actually we don't have a ton
+        here, but we've got a couple. No, just to. Oh, well, this is because
+        this video or this repo was created before we went into branching. But
+        some of our repos have like, I don't know, seven, eight, maybe ten
+        branches and you may not want all of them on GitHub or you may not want
+        to push them all at once at least. So when we push, we call out a
+        particular branch that we want to send to GitHub. Often that will be
+        your master or main branch, but you can push any branch up to GitHub and
+        I'll show you that.
+        <h3>
+          So this is a really common command to get Push Origin Master, though
+          it is becoming slightly less common as more people rename their master
+          branch to Main. If you recall, we talked about this early on when I
+          introduced branching. It now comes up again Master versus Main because
+          GitHub, as I mentioned at the end of 2020, decided to make the default
+          branch name on a GitHub repo main instead of master. So their
+          instructions tell you to add a remote called Origin, but then rename
+          your branch the master branch to Main and then push Main. So I will do
+          this as well. In a separate video I will show this process. It's the
+          exact same process. We rename a branch, we name it main, and then we
+          push up Main. But I'm going to start with Master, just to keep this as
+          simple as possible, because we have a master branch, right?
+        </h3>
+        <h3>
+          We've been working with the term master, so we'll start there first.
+          So I have this remote called origin as we already discussed, get
+          remote dash v, we see what it's pointing to and it's always a good
+          idea to see what what we have, if we have any uncommitted changes that
+          won't go up otherwise we're ready. We're going to do a git push and
+          then origin is where we're pushing to and then master is the branch we
+          are pushing up. Okay, so this is what our GitHub looks like right now.
+          I'll refresh. There's nothing here except these instructions. This is
+          the repo. But now I'm going to push and there's going to be a
+          substantial change. And remember.
+        </h3>
+        Oh, gosh, I put images in this repo, didn't I? Well, that's why it's
+        taking a little bit. So you can see here I have some images in that mood
+        board. Usually you don't include images in a or at least not large
+        images like I have, but it finished up. Most repos are going to push
+        way, way, way faster than that because they're usually just code. So I'm
+        going to refresh the page. And now we see something entirely different.
+        Right. We don't see those instructions. Now we see our file contents. So
+        chapter one, chapter two, chapter three, characters outline. We see
+        different commits. I'll actually do a separate video where I walk
+        through what we see, but we also have access to things like
+        contributors. We can see there's only one branch which is the master
+        branch, and I can take a look at chapter one. For example, here's the
+        contents of Chapter one.
+      </h3>
+      Okay. So we have our code up here. Now, what I want to show you is that we
+      can push any branch. I talked about pushing master because that's what we
+      have on this project. But if we make a new branch, which I'll just make,
+      what should my branch be called? How about empty or nearly empty? I switch
+      to that branch and I'm just going to delete pretty much everything in
+      here. I'm going to delete Moodboard for sure. So that's actually our m
+      dash ref to get rid of that. It's a folder. And erm. How about all
+      chapters? Chapter one. I'll just leave the outline and the characters. So
+      now, whoops, this is all we have. I'm on a branch, though, called Empty,
+      so I'm going to add everything and then get, commit, delete most things.
+      All righty.
+    </h3>
+    <h3>
+      Now, if I want to push the code that I just changed, I want to push my
+      last commit from this branch. Remember, I'm on the empty branch. I need to
+      push the empty branch. So let me illustrate that here. I've got some
+      diagrams. What we just did was we pushed up our master branch to GitHub.
+      So there was nothing on GitHub. I pushed up master. Whoops, I went to far
+      get push origin master assuming our remote is named Origin. Now in this
+      diagram, I have a second branch called New Feature. I'm going to push that
+      up. Get Push Origin new feature. In our case, our branch is called empty.
+      So get push origin empty. I don't have to be on this branch, by the way. I
+      happened to be on it, which is very common that you're taking a look at
+      what's on a branch and then you push it up, but you don't have to be on
+      it. So get push origin empty. And remember, if it asks you for your
+      password, not a big deal. It put your email and password or your username
+      and password, but go back and check out the SSH video so that it doesn't
+      have to keep bugging you, you know, asking you for a password every time
+      you push.
+    </h3>
+    <h3>
+      Okay. So now I'm going to refresh. And it doesn't look like much changed.
+      But now we have two branches and we can see the two branches here, master
+      and empty, and I can switch between them. And this is my empty branch. I'm
+      just viewing it on GitHub and you'll see it just has two files. Right? Go
+      back to Master. And I have a whole bunch of stuff. So I'm going to just go
+      through this process one more time, just to make it very clear, I'm going
+      to go back to Master, get switch master and let's make some some changes.
+      We'll do some new work here. How about chapter four? Dot txt. All righty.
+      And I'll just leave it blank, I guess. And I'm going to add that. So get
+      ADD Chapter four, get commit. Begin Chapter four.
+    </h3>
+    <h3>
+      Pop quiz. What's on my GitHub? What's the most recent comet that I'll see
+      on the GitHub repo? Nothing has changed on GitHub. It's still exactly the
+      same. If we're looking at the master branch, nothing's changed. If we're
+      looking at the empty branch, nothing has changed since we last pushed.
+      GitHub doesn't just stay in sync automatically with my local repo. I have
+      to push. So why don't I push up that commit? Chapter four begin chapter
+      four. Now I said push up that commit. We don't select a specific commit.
+      We push an entire branch as we've talked about. So I made that commit on
+      the master branch. So I'll push that up, get push origin. The only remote
+      we have right now. Origin Master. Now, if we head over here and refresh,
+      we see first of all, my most recent commit begin chapter four one minute
+      ago. We also see the actual updated contents. Right. Chapter four text is
+      right there. Okay. So in the next video, I'm going to kind of walk through
+      a GitHub repository, show you how we view the commits, the branches, diffs
+      or changes, all that stuff. And then we'll get some more practice with
+      pushing and we'll talk about renaming to use the main branch.
+    </h3>
+
+    <h3>
+      Okay so I made a branch off master called testgitpush, switched to that
+      branch, then made a change, added/committed, git status to make sure tree
+      is clear, then did git push origin testgitpush and GitHub updated, now it
+      has a dropdown menu showing both master branch and my new testgitpush
+      branch
+    </h3>
+
+    <h2>
+      The next section is more practice with git push. It went well, I did more
+      practice with adding/deleting files/content then pushing those changes to
+      GitHub, and seeing GitHub update with those changes in real time.
+    </h2>
+    <h3>
+      So colt just went over how we can push a local branch up to a different
+      branch at the same time, example:
+    </h3>
+    <h3>git push remotename local-branch:remote-branch</h3>
+    <h3>
+      The exmaple colt uses is with a pancake branch thats local and a waffle
+      branch that's remote, it's not very common but the point is that it's
+      possible. git push origin pancake:waffle
+    </h3>
+    <h3>Another example</h3>
+    <h3>
+      <ol>
+        <li>
+          git switch -c "cats" (this creates and switches to a new branch called
+          cats)
+        </li>
+        <li>touch cats.txt</li>
+        <li>git add cats.txt</li>
+        <li>git commit -m "create cats file"</li>
+        <li>
+          git push cats:master (this tells git to take the cats branch
+          containing a txt file and push it to our master branch on GitHub)
+        </li>
+      </ol>
+      So we just pushed the cats branch to the master branch, this is a good
+      example that shows the difference between the branch on your local machine
+      and the branch one GitHub.
+    </h3>
+    <h2>Intro to the "-u" flag appended to the git push command</h2>
+    <h3>
+      "u" stands for upstream, normally we want the upstrean branch to be origin
+      master/main, running git push -u origin master sets the upstream of the
+      local master branch so that it tracks the master branch on the origin
+      repo.
+    </h3>
+
+    <h2>Another workflow: Cloning first</h2>
+    <h3>If you haven't yet began work on your local repo you can:</h3>
+    <h3>
+      <ul>
+        <li>Create a brand new repo on GitHub</li>
+        <li>Clone it down to your local machine</li>
+        <li>Do some work locally</li>
+        <li>Then push back to GitHub</li>
+      </ul>
+      Okay so this seems pretty easy, just create an empty repo, copy the
+      hash/cloning address, use the command: git clone
+      https://GitHub.com/Colt/chickens-demo.git Then a message pops up saying
+      "you appear to have cloned an empty repo", type git status and it should
+      say on branch main/master, and if we use the git remote -v command it
+      shows we're all set up and ready to start making changes, we can now git
+      add/commit/push and GitHub will be good to update.
+    </h3>
+    <h3>
+      Also just a note, going forward we should use main instead of master for
+      our big branch, we can rename a branch with this command: git branch -M
+      main
+    </h3>
+    <h3>
+      Keep in mind we have to change the default branch in GitHub settings,
+      after I used the git branch -M main, it didn't rename it, created a branch
+      from master called main. To fully change the name there is a way:
+    </h3>
+    <h3>
+      Renaming Git Branch Follow the steps below to rename a Local and Remote
+      Git Branch: Start by switching to the local branch which you want to
+      rename: git checkout old_name Copy Rename the local branch by typing: git
+      branch -m new_name Copy At this point, you have renamed the local branch.
+      If you've already pushed the old_name branch to the remote repository ,
+      perform the next steps to rename the remote branch. Push the new_name
+      local branch and reset the upstream branch: git push origin -u new_name
+      Copy Delete the old_name remote branch: git push origin --delete old_name
+      Copy That's it. You have successfully renamed the local and remote Git
+      branch
+    </h3>
+    <h3>
+      I'm going to leave master and main up on this project as an example.
+    </h3>
+
+    <h2>
+      GitHub basics exercise: last section on intro to GitHub, going to do
+      colt's end of section exercise now
+    </h2>
+
+    <h3>
+      Okay so the exercise went well, up until the merge conflict, there was a
+      merge conflict that I resolved in VSCODE but when I pushed it back to
+      GitHub it showed the >>>> head >>> and the unstaged changes in the
+      push/change, I should've double checked before pushing. Exercise is now
+      done though, pretty comfortable with git push now.
+    </h3>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+      integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
