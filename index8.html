@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/HOME/style.css" />
+    <title>Fetching and Pulling</title>
+  </head>
+  <body>
+    <nav class="navbar sticky-top navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Dropdown link
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <h2><u>Fetching and Pulling</u></h2>
+
+    <h3>
+      In this section we'll discuss git fetch and git pull, so if we're working
+      with a collaborator. We've seen the other half with the git push command,
+      but now we'll look at git pull
+    </h3>
+    <h3>Here's what's critical in this section:</h3>
+    <ul>
+      <li>Remote tracking branches</li>
+      <li>Git Fetch</li>
+      <li>Git Pull</li>
+    </ul>
+    <h2>A closer look at cloning</h2>
+
+    <h3>
+      When we clone a repo, whatever it is, what happens is that after we clone
+      the repo to our local machine we receive all the commits, all the files
+      from the repo, but we also receive the "remote tracking branch", which is
+      a reference to the state of the master branch on the remote, we can't move
+      this, it's like a bookmark pointing to the last known commit on the master
+      branch on origin
+    </h3>
+    <h3>Remote tracking branches follow this pattern: remote/branchname</h3>
+    <ul>
+      <li>
+        origin/master references the state of the master branch on the remote
+        repo named origin
+      </li>
+      <li>
+        upstream/logoRedesign references the state of the logoRedesign branch on
+        the remote named upstream (a common remote name)
+      </li>
+    </ul>
+    <h2>Checking out remote tracking branches</h2>
+    <h3>
+      So if on our main branch, let's make changes, add and commit them and now
+      we have two commits locally on the main branch, and we see something new,
+      theres a message in git bash that says: On branch main Your branch is
+      ahead of 'origin/main' by 1 commit. (use "git push" to publish your local
+      commits)
+    </h3>
+    <h3>
+      So if we do this again, after adding another name to our animals.txt file,
+      now we see: Your branch is ahead of 'origin/main' by 2 commits. (use "git
+      push" to publish your local commits) nothing to commit, working tree clean
+    </h3>
+    <h3>
+      So that's the point of this, it shows how many commits are since the
+      origin/main
+    </h3>
+    <h3>
+      We can also checkout what our origin/main looks like, using git checkout
+      origin/main, we'll end up in detached HEAD
+    </h3>
+    <h3>
+      So let's type git branch -r to view the remote tracking branch, in our
+      case it's origin/main
+    </h3>
+    <h3>
+      After entering git checkout origin/main the following message is
+      displayed: git checkout origin/main Note: switching to 'origin/main'. You
+      are in 'detached HEAD' state. You can look around, make experimental
+      changes and commit them, and you can discard any commits you make in this
+      state without impacting any branches by switching back to a branch. If you
+      want to create a new branch to retain commits you create, you may do so
+      (now or later) by using -c with the switch command. Example: git switch -c
+      new-branch-name Or undo this operation with: git switch - Turn off this
+      advice by setting config variable advice.detachedHead to false HEAD is now
+      at 10e4639 Create pets.txt
+    </h3>
+    <h3>
+      We can now create another branch from this state, remember now our changes
+      to pets.txt are gone , and we're back to pets.txt original state
+    </h3>
+    <h3>
+      We can now switch back to the main branch, and our pets.txt file changes
+      return, now we see reagan, maggie, and buck
+    </h3>
+
+    <h3>
+      So if we want those changes to go onto GitHub, we just push them with git
+      push origin main,
+    </h3>
+    <h3>
+      I'm having some problems pushing to GitHub, im changing my config from
+      [core] repositoryformatversion = 0 filemode = false bare = false
+      logallrefupdates = true symlinks = false ignorecase = true [user] name =
+      Luke email = lrsorrenti@yahoo.com [remote "origin"] url =
+      git@GitHub.com:LRSORRENTI/GIT-GitHub-COLT-STEELE.git fetch =
+      +refs/heads/*:refs/remotes/origin/*
+    </h3>
+    <h3>
+      to the user email - lrsorrenti@hotmail.com, let's see if this works.... it
+      didn't.
+    </h3>
+    <h2>
+      Okay so half-hour and lot's of googling later I got to a stack overflow
+      answer, to fix the above problem where is says user name of my old GitHub
+      luso8 is denied. I don't understand exactly why it was letting me push
+      yesterday and earlier today then suddenly stopped, but after going into
+      windows credentials manager and deleting the luso8 credentials, git push
+      now works, what's also confusing me is why is LRSORRENTI not showing up in
+      that windows credentials page? Wait no I just checked, the credentials
+      before were luso8, my old GitHub, now it says the credentials are set to
+      LRSORRENTI, hopefully this is the last time I'll need to do this, maybe
+      there was an easier way of bypassing the credentials problem through git,
+      but hey it works now so let's get back to the course.
+    </h2>
+
+    <h2>NEXT SECTION: WORKING WITH REMOTE BRANCHES</h2>
+    <h3>
+      For ex, if we have a repo we want to clone, that has many different
+      branches on GitHub, how do we work with those branches locally
+    </h3>
+    <h3>
+      So colt has a remote-branches demo repo we're going to clone, after
+      cloning we type git branch and we see only one branch, main, even though
+      on GitHub we saw that this specific repo has 5 or 6 branches
+    </h3>
+    <h3>
+      How do we work on the other branches then? Well we can view the remote
+      branches with git branch -r command, we see all the branches we couldn't
+      see with just git branch, so git knows about those branches, so that's why
+      we need to discuss the diff between a full-fledged branch and a remote
+      tracking branch
+    </h3>
+    <h3>
+      By default, when we clone a repo from GitHub, we get the main/master
+      branch, and automatically it's pointing to origin/master, but we have
+      other branches in our case it's origin/movies, origin/food, origin/fantasy
+    </h3>
+    <h3>
+      Let's say we want to work on a branch called puppies, what we could do is
+      use checkout origin/puppies, but remember that puts us into detached HEAD
+      state,
+    </h3>
+    <h3>
+      Lets do git checkout origin/food, after entering it displays the "you are
+      in deteched HEAD state", but now we can see the files inside of our food
+      branch,
+    </h3>
+    <h3>
+      Let's say I want access to these branches, we can use the git switch
+      command + remote branch name to create a local branch of that remote
+      branch so we can work on it
+    </h3>
+    <h3>
+      And yes this does now work, when I type git branch main AND food now show
+      up as accessible branches locally
+    </h3>
+    <h3>
+      Now let's do the same for the remote movies branch, so from main type git
+      branch -r to view all remote branches, we see movies is a remote branch,
+      then type git switch movies, and voila we now have the remote movies
+      branch local to our machine
+    </h3>
+    <h3>
+      Note: git switch is clutch in this regard, in the past we would need to
+      type git checkout --track origin/movies in order to achieve the same as
+      git switch movies, so more concise
+    </h3>
+
+    <h2>Git Fetch THE BASICS:</h2>
+
+    <h3>
+      Let's talk about fetching and pulling, fetch and pull are two commands we
+      can use to get changes down from GitHub, if you're working on a team, and
+      someone makes/pushes changes, we use git fetch to pull those changes down
+      from the remote repo (GitHub) and it fetches them to our local repo, just
+      the local repo though, fetch does NOT bring the changes all the way to our
+      current workspace, that's what git pull does.
+    </h3>
+    <h3>
+      The git pull command will bring changes down from our remote repository
+      (GitHub) and bring them all the way down to our workspace.
+    </h3>
+    <h3>
+      So fetching allows us to download changes from GitHub, BUT those changes
+      will not automatically integrate into our workspace, it let's you see what
+      your teammates have been working on and the changes they've made, without
+      having to merge those changes to your local repo
+    </h3>
+    <h3>
+      Think of git fetch as "hey, please go get the latest info from GitHub, but
+      don't integrate it into my working directory"
+    </h3>
+
+    <h3>
+      The command itself is: git fetch origin, or git fetch remotenamehere If a
+      remote is not specified after git fetch, it will automatically fetch
+      origin
+    </h3>
+    <h3>
+      We can also use git fetch origin master or git fetch origin branchName to
+      fetch a specific branch
+    </h3>
+
+    <h3>
+      A good way to think of it is, let's say your teammate Bob made 3 changes
+      to the remote repo, we can use git fetch to bring those changes down and
+      view them without directly altering our working directory, those changes
+      will not automatically change our working directory, we can view them and
+      see what Bob has done to the project
+    </h3>
+    <h3>
+      So once we use git fetch origin master, in order to view those changes we
+      pulled down from GitHub we use: git checkout origin/master
+    </h3>
+    <h3>
+      Okay so the exercise went well, except when I added an apple.txt file on a
+      different branch from master, then used git fetch, it wasn't showing up, I
+      think it's because I didn't use git checkout, I used git switch
+    </h3>
+    <h3></h3>
+    <h3>
+      Okay so I tried again but this time used this answer from stack overflow,
+      git checkout origin/yourbranchname -b newbranchname git log newbranchname
+      You should see remote changes in the newbranchname. You can also merge
+      those changes into your branch with git checkout yourbranchname git merge
+      origin/yourbranchname
+    </h3>
+    <h3>
+      After entering the above I was able to view the changes I made on a new
+      branch.
+    </h3>
+
+    <h2>Git Pull</h2>
+    <h3>
+      git pull is another command we can use to retrieve changes, except with
+      pull it will integrate those changes, and immediately update our working
+      directory, think of it as a git fetch + git merge all ine one go. As
+      opposed to git fetch where we can view the changes, but our working
+      directory stays the same.
+    </h3>
+
+    <h3>
+      The syntax is similar to fetch it's: git pull remote branchname so it
+      would look like git pull origin master, so it would both fetch the data
+      changes AND integrate in one command
+    </h3>
+    <h3>
+      Keep in mind where we run git pull matters, whatever branch we're on,
+      that's where the changes will be merged to
+    </h3>
+
+    <h3>
+      Pulls can also result in merge conflicts, and we'll need to resolve them
+      like a normal merge
+    </h3>
+    <h3>
+      Okay so after using git pull, a message in git bash popped up asking for a
+      commit message as to why the merge was necessary, so I googled it and came
+      across this answer:
+    </h3>
+    <h3>
+      Type the subject of your commit on the first line. Remember to keep it
+      short (not more than 50 characters). Leave a blanagraphs and bullet points
+      to give a detailed breakdown. Don't write everything out on one line,
+      instead, wrap text at 72 characters. Press Esc and then type :wq to save
+      and exit.
+    </h3>
+    <h3>
+      Then after entering esc and :wq the changes from GitHub, two ascii art
+      files were fetched and merged into my working directory
+    </h3>
+
+    <h2>Git Pull Merge Conflicts</h2>
+
+    <h3>
+      Pulls can result in merge conflicts, sometimes we'll get a fast forward
+      merge and things go smoothly, but if changes were made on GitHub, then we
+      try to pull, a merge conflict may appear
+    </h3>
+
+    <h2>Shorter syntax for git pull</h2>
+    <h3>
+      Often when we use git pull, we can get away with a shorter syntax: git
+      pull
+    </h3>
+
+    <h3>
+      If we run git pull without specifying a particular remote/branch to pull
+      from, git assumes the following:
+    </h3>
+    <ul>
+      <li>Remote default to origin</li>
+      <li>
+        Branch will default to whatever tracking connection is configure for our
+        current branch
+      </li>
+    </ul>
+
+    <h3>
+      Note: This behavior can be configured and tracking connections can be
+      changed manually. Most people don't mess with this stuff
+    </h3>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+      integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
