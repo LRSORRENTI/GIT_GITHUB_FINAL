@@ -28,6 +28,7 @@ ol{
     margin-bottom: 40px;
     font-weight: bold;
 }
-.active{
-background-color: orange;
+.dropdown-menu li a {
+    font-size: 30px;
+    font-weight: bold;
 }
