@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/HOME/style.css" />
+    <title>Unified Notes</title>
+  </head>
+  <body>
+    <nav class="navbar sticky-top navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Dropdown link
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container mb-4 d-flex justify-content-center mt-4">
+      <h2>The next section we go over installing and setting up Git</h2>
+    </div>
+
+    <div class="container">
+      <h2 class="mb-4 d-flex justify-content-center">
+        <u>Installing Git, terminals vs GUI's </u>
+      </h2>
+      <h3 class="mb-4 d-flex justify-content-center">
+        We're going to start with the command line first then we'll use a GUI to
+        see what that's like, the GUI we're going to utilize later is: GitKraken
+      </h3>
+      <h3 class="mb-4 d-flex justify-content-center">
+        GitKraken is free and it's the GUI that colt recommends
+      </h3>
+    </div>
+    <div class="container">
+      <h2 class="mb-4 d-flex justify-content-center">
+        <u>TERMINAL CRASH COURSE</u>
+      </h2>
+      <h3 class="mb-4 d-flex justify-content-center">
+        In this section I'm going to run through some of the essential terminal
+        commands for navigation for moving around on your machine. We need this
+        in order to work with Git. Commands like ls and pwd, and cd:
+      </h3>
+    </div>
+    <div class="container">
+      <ul>
+        <li>
+          "start ." command - this command will open the file explorer of
+          whatever directory you're inside of
+        </li>
+
+        <li>
+          "ls" the ls command will display all files currently inside of the PWD
+          or present working directory, we can also use ls with a folder name to
+          display whats inside of a selected folder like "ls 'Pictures'" or "ls
+          'Desktop'"
+        </li>
+
+        <li>
+          Anyway, the next command I'll show you is pretty simple. It's called
+          'pwd' for print working directory. And what this will do, it's very
+          simple. It just prints out your current location. It prints out the
+          path to where you currently are.
+        </li>
+        <li>
+          So to our next command which is 'cd' (change directory) it's the
+          equivalent of changing folders in file explorer. So to change
+          directories we can go from something like /Desktop to
+          /Desktop/GIT_AND_GitHub_COLT-STEELE by using the cd command followed
+          by the directory name so the above would be: cd
+          /GIT_AND_GitHub_COLT-STEELE
+        </li>
+        <li>
+          Now let's look at how to move 1 directory backwards. So if we're stll
+          inside /Desktop/GIT_AND_GitHub_COLT-STEELE, we would do 'cd ..' cd
+          followed by two dots .., now we're back into just /Desktop
+        </li>
+      </ul>
+    </div>
+    <div class="container mt-4">
+      <h2 class="mb-4 d-flex justify-content-center">
+        <u>Terminal Crash Course: Creating Files & Folders</u>
+      </h2>
+      <h2 class="mb-4 d-flex justify-content-center">
+        To create a new file we use the 'touch' command followed by the name we
+        want to assign to the file so for ex: //// touch index.html style.css
+        script.js //// so after we run that command three files will be created
+        inside of whichever directory we are in, an html, css, and javascript
+        file
+      </h2>
+      <h2 class="mb-4 d-flex justify-content-center">
+        Now lets look at how to create folders or directories, the command is:
+        mkdir myDirectory // so we now created a directory called myDirectory
+        and if we cd into it we can create more directories inside of it, or
+        just create files, or both. mkdir is just a way to organize files. You
+        can have directories inside of directories and even more directories
+        inside those with files inside all of them. It's a good way to organize
+        your files.
+      </h2>
+    </div>
+    <div class="container">
+      <h2 class="mb-4 d-flex justify-content-center">
+        <u>Terminal Crash Course: Deleting Files and Folders</u>
+      </h2>
+      <h2 class="mb-4 d-flex justify-content-center">
+        To delete a file we use the command 'rm' followed ny the name of the
+        file. Remember this fully deletes the file it doesn't just send it to
+        the recycling bin like using delete on the Desktop would, after using
+        'rm' the file is fully gone, so be careful with this command.
+      </h2>
+      <h2 class="mb-4 d-flex justify-content-center">
+        Now keep in mind we can't use the 'rm' command to delete directories,
+        instead to delete full directories we must use 'rm -rf' command, so it's
+        just rm with the -rf flag after followed by the directory name (rm -rf
+        testDirectory), this would delete the testDirectory
+      </h2>
+      <h2 class="mb-4 d-flex justify-content-center">
+        We can add flags to a lot of commands, one is ls -a, that command will
+        display all files including hidden files, so -a modifies the behavior of
+        ls
+      </h2>
+    </div>
+    <div class="container">
+    <h2 class="mb-4 d-flex justify-content-center"><u>Git Repos</u></h2>
+    <h2 class="mb-4 d-flex justify-content-center">What really matters in this next section</h2>
+    <h2 class="mb-4 d-flex justify-content-center">
+      We're going to go over what git repos are, and we'll learn 'git init',
+      'git status' commands, we'll also go over the git folder and what's inside
+      of it, the Committing workflow, an important concept to incorporate into
+      your daily coding routine, we'll also discuss three more commands 'git
+      add', 'git commit', 'git log', these are very important commands, so
+      practicing them is crucial
+    </h2>
+    <h2 class="mb-4 d-flex justify-content-center"><u>Repository</u></h2>
+    <h2 class="mb-4 d-flex justify-content-center">
+      A git 'repo' is a workspace which tracks and manages files within a
+      folder, anytime we use Git with a project, app, etc we need to create a
+      new git repo or Repository, we can have as many repos as we need, all with
+      separate histories and contents
+    </h2>
+    <h2 class="mb-4 d-flex justify-content-center">
+      So just because we have git installed doesn't mean we're automatically
+      using it, we have to tell git we're creating a new Repository, it's a
+      unique workplace with it's own history, each repo is like encapsulated
+      bubbles.
+    </h2>
+    <h2 class="mb-4 d-flex justify-content-center">
+      For example if we want a repo inside a specific folder or directory we
+      must tell Git: Ok I want a repo inside this directory. And whatever
+      commands I run are specific to that repo.
+    </h2>
+    <h2 class="mb-4 d-flex justify-content-center">
+      Now that we know what repos are in general, let's go over how to intialize
+      a new repo using git, but first let's go over the 'git status' command,
+      and the 'git init' command
+    </h2>
+    <div class="container">
+      <ul>
+        <li>'Git Status' Command</li>
+        <h3 class="mb-4 d-flex justify-content-center">
+          The 'Git status' command will give us info about the current repo, if
+          there's a repo the command will return something like: "On branch
+          gitdemo nothing to commit, working tree clean" if there isn't a repo
+          in the specified location 'git status' will return an error
+        </h3>
+        <li>
+          'Git init' Command
+        </li>
+        <h3 class="mb-4 d-flex justify-content-center">
+          So when we use 'Git init' whatever folder or directory we are inside
+          will become the location of a new git Repository, keep in mind we only
+          ever run 'git init' once per project, so if we had a project
+          myWebsite, we use 'git init' at the beginning, and we could work on
+          myWebsite project for years and years, we only use 'git init' once at
+          the start of a git repo, we want that continued history.
+        </h3>
+      </ul>
+    </h3>
+    <h3 class="mb-4 d-flex justify-content-center">
+    Now there is a hidden file/folder that is created when we use git init, for
+    example if we type 'ls -a' inside our current directory it shows the
+    following: ./ , ../ , .git/ , index.html , style.css, script.js
+    </h3>
+    <h3 class="mb-4 d-flex justify-content-center">
+      We can even cd into the .git folder and it will show things like: 'HEAD',
+      'config', 'description', 'hooks', 'refs', 'info', 'objects', we can also
+      delete the .git folder but beware, this deletes the repo entirely, rm -rf
+      .git, the .git folder is where everything is stored, that's why it's a
+      hidden folder, so you don't accidentally delete or mess with it.
+    </h3>
+    </div>
+    <div class="container">
+    <h2 class="mb-4 d-flex justify-content-center"><u>Common early git mistakes</u></h2>
+    <h3>
+      So it's important to understand when we initialize a git repo, anything
+      nested inside the directory that we intialize with 'git init' is tracked,
+      so you could have folders inside of directories, inside of directories
+      inside of more directories, all that is tracked if we use 'git init' in
+      the parent directory, it tracks every file change all the way down.
+    </h3>
+    <h2 class="mb-4 d-flex justify-content-center">
+      <em
+        ><u
+          >WARNING! DO NOT INIT A REPO INSIDE OF A REPO, BEFORE RUNNING GIT
+          INIT, USE GIT STATUS TO VERIFY THAT YOU'RE NOT CURRENTLY INSIDE A REPO
+        </u></em
+      >
+    </h2>
+    <h2 class="mb-4 d-flex justify-content-center">
+      We want to keep our repo's separate, because it can cause problems later
+      on, avoid this. Just make sure to always use 'git status' to double check
+    </h2>
+    </div>
+    <div class="container">
+    <h2 class="mb-4 d-flex justify-content-center"><u>The committing workflow overview</u></h2>
+    <h2 class="mb-4 d-flex justify-content-center">
+      What is committing? Committing is using checkpoints or like saves in a
+      video game, you add a nav bar then commit, then change something, else and
+      commit that change, on and on. Like in a game you can make a save early
+      on, then revisit that early save after some time so see a previous version
+      of your character. We can undo commits, revisit early commits, merge
+      commits.
+    </h2>
+    <h2 class="mb-4 d-flex justify-content-center"><u>Git add/commit command</u></h2>
+    <h2 class="mb-4 d-flex justify-content-center">
+      This is the first command we use when we want to make a commit, the
+      workflow is usually like:</h2>
+      <ol>
+        <li>Work on stuff, make new files, edit or delete files</li>
+        <li>
+          Add the changes with 'git add', where we group specific changes
+          together in preparation of committing, now the files we specify to add
+          are now in the staging area
+        </li>
+        <li>
+          Commit the changes with 'git commmit', Commit everything that we just
+          added with 'git add', now the files that are in the staging area are
+          commited, usually followed by a commmit message 'git commit -m
+          "message here"', the message should summarize the changes made
+          concisely
+        </li>
+      </ol>
+    
+    <h2 class="mb-4 mt-4 d-flex justify-content-center">
+      To reiterate when we commit we always include: git commit -m "message
+      here" with a massage as descriptive and concise as possible
+    </h2>
+    <h2 class="mb-4 d-flex justify-content-center">
+      Also to add multiple files to the staging area, you would use the command:
+      git add .
+    </h2>
+    <h2 class="mb-4 d-flex justify-content-center">
+      So (git add .) git add plus a dot at the end will stage all modified
+      files, so if we changed index.html and style.css in in this repo then did
+      git add . both files would be staged, but you could technically stage 10
+      modified files or 50 or 100 using git add .
+    </h2>
+</div>
+<div class="container"></div>
+    <h2 class="mb-4 d-flex justify-content-center">Git committing exercise</h2>
+    <h2 class="mb-4 d-flex justify-content-center">
+      Okay so I just finished the git commit exercise and ran into a problem,
+      there was an error being thrown when I was trying to use (git add
+      groceries.txt and yard.txt) after googling the error I found the fix to
+      the problem on stack overflow, to fix the error message:
+    </h2>
+    <h2 class="mb-4 d-flex justify-content-center">
+      Another git process seems to be running in this repository, e.g. an editor
+      opened by 'git commit'. Please make sure all processes are terminated then
+      try again. If it still fails, a git process may have crashed in this
+      repository earlier: remove the file manually to continue.
+    </h2>
+
+    <h2 class="mb-4 d-flex justify-content-center">
+      We need to cd into our .git directory then use the command: (rm -f
+      .git/index.lock) and this fixes the error message, hopefully this didn't
+      do anything bad inside our .git directory but I suppose we'll find out
+      later? The error did not occur in colt's demonstration so I'm not sure
+      what I did specifically but after deletion it worked.
+    </h2>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+      integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

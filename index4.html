@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/HOME/style.css" />
+    <title>Unified Notes</title>
+  </head>
+  <body>
+    <nav class="navbar sticky-top navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Dropdown link
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+    <h2 class="mb-4 d-flex justify-content-center">Commits in more detail</h2>
+    <h2 class="mb-4 d-flex justify-content-center">In the next section we're going to go over the following:</h2>
+    
+    <ul class="mb-4">
+        <li>Atomic commits (important)</li>
+        <li>Configuring default editor (important)</li>
+        <li>Working with a GUI (Nice to have)</li>
+        <li>Amending commits (Nice to have)</li>
+        <li>Git ignore (Critically important)</li>
+        <li>Navigating git documentation (important)</li>
+    </ul>
+    
+    
+    <h2 class="mb-4 d-flex justify-content-center">ATOMIC COMMITS</h2>
+    <h2 class="mb-4 d-flex justify-content-center">It's common advice to keep your commits atomic, what does 
+        atomic mean? It means keeping each commit focused on a single
+        change. Commit after each individual change to 
+        keep things tidy and easier to problem solve. So make a 
+        commit after editing text, or after implementing a css change,
+        or after doing something in your JS file etc.. This practice 
+        ensures an easier time identifying bugs in order to 
+        preserve the work you've done that isn't problematic. Atomic
+        commits make your code easier to review.
+    </h2>
+    <h2 class="mb-4 d-flex justify-content-center">When writing commit messages you should use present tense
+        commit messages, so for ex: Writing "Make website color chnage",
+        instead of "Made website color change", but I don't know, it 
+        seems a little pedantic but I suppose if an employer prefers
+        one or the other go with that.
+    </h2>
+    <h2 class="mb-4 d-flex justify-content-center">A closer look at Git Log command</h2>
+    <h2 class="mb-4 d-flex justify-content-center">We can use the "git log --oneline" to show a concise
+        version of our log. This is useful and we'll go over shortly
+        why it's so important. In essence it makes it easier to see
+        when we need to time travel back to, which commit needs to 
+        be gone back to.
+    </h2>
+    <h2 class="mb-4 d-flex justify-content-center">Commiting with a GUI like GitKraken</h2>
+    <h2 class="mb-4 d-flex justify-content-center">Even if you're not interested in using a GUI, learning
+        about commits in GUI's are important, worth checking out. They
+        help with visualizing commits.
+    </h2>
+    <h2 class="mb-4 d-flex justify-content-center">So using the GUI you press stage changes on the right 
+        side of the GUI, then it asks for a commit message, then
+    press commit changes to file. This accompishes the same
+    exact thing as in GitBash git add, git status, git commit -m etc.. </h2>
+    <h2 class="mb-4 d-flex justify-content-center">GitKraken seems really nice, I may start using it often, I guess
+        once we go over branching and merging the visualiztion of a 
+        GUI can be very useful
+    </h2>
+    <h2 class="mb-4 d-flex justify-content-center">==============</h2>
+    <h2 class="mb-4 d-flex justify-content-center">Amending Commits</h2>
+    <h2 class="mb-4 d-flex justify-content-center">==============</h2>
+    <h2 class="mb-4 d-flex justify-content-center">Sometimes mistakes when commiting happen, so instead
+        of doing a new commit we can amend previous commits using
+        the --amend flag
+    </h2>
+    <h2 class="mb-4 d-flex justify-content-center">Keep in mind this ONLY works on the very last commit made
+        you may not go back more than one commit using amend flag, 
+        --amend only works on the last commit
+    </h2>
+    <h2 class="mb-4 d-flex justify-content-center">Okay so this --amend isn't working for me, I'm getting an 
+        error message saying:
+        <h2 class="mb-4 d-flex justify-content-center">unknown option: --amend
+        usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+                   [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+                   [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+                   [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+                   [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+                   <command> [<args>]
+                   </h2>
+                   <h2 class="mb-4 d-flex justify-content-center">
+                   Will come back to this later to see what I'm doing wrong
+                   
+                </h2>
+    <h2 class="mb-4 d-flex justify-content-center">=======================</h2>
+                <h2 class="mb-4 d-flex justify-content-center">Ignoring files with /.gitignore </h2>
+     <h2 class="mb-4 d-flex justify-content-center">=======================</h2>    
+                <h2 class="mb-4 d-flex justify-content-center">We can tell git which directories and files
+                    to ignore in a given repository, we use .gitignore
+                    This is useful for things you know you never want to Commit
+                    like:
+                    </h2>
+                    <ul class="mb-4">
+                        <li>Secrets, API keys, credentials etc..</li>
+                        <li>Operating system files</li>
+                        <li>Log files</li>
+                        <li>Dependencies & packages</li>
+                    </ul>
+        
+                <h2 class="mb-4 d-flex justify-content-center">Typically we put .gitignore in the root of a repository
+                    We tell git which files to ignore, let's practice This
+                    by making a new directory called gitIgnoreDemo 
+                </h2>
+                <h2 class="mb-4 d-flex justify-content-center">So colt just used git ignore to ignore some json files, 
+                    as well as a secrets.txt file that contains a fake API key,
+                    and using git ignore he made it so those files did not 
+                    show up in gitBash so they would never be accidentally 
+                    added
+                </h2>
+                <h2 class="mb-4 d-flex justify-content-center">================================</h2>
+             <h2 class="mb-4 d-flex justify-content-center"><u>Working with branches in git</u></h2>
+                <h2 class="mb-4 d-flex justify-content-center">================================</h2>
+                <h2 class="mb-4 d-flex justify-content-center">Critical importance:</h2>
+                <ul>
+                    <li>Branching... what is it and why use it?</li>
+                    <h2 class="mb-4 d-flex justify-content-center">This is a part of git that must be mastered 
+                        in order to use git day to day, learning branching
+                        is vital to git workflow, branching along with 
+                        commits happen daily in the life of a developer
+                     </h2>
+                    <li>Understanding git HEAD</li>
+                    <h2 class="mb-4 d-flex justify-content-center">Also critical is understanding git HEAD, what HEAD is
+                        and the fact that it points to a branch reference and that
+                        reference points to a commit
+                     </h2>
+                    <li>Git branch</li>
+                    <li>Git switch</l1>
+                    <li>Git checkout</li>
+                    <h2 class="mb-4 d-flex justify-content-center">Also crucial is understanding the branch command, the git 
+                        switch command, the git checkout command
+                     </h2>
+                </ul>
+          
+            
+           
+             <h2 class="mb-4 d-flex justify-content-center">Important but not crucial in this section is:
+                deleting and renaming branches, and Master vs Main branch
+             </h2>
+             <h2 class="mb-4 d-flex justify-content-center">Nice to have but not super important is HEAD and ref 
+                behind the scenes
+             </h2>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+      integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
