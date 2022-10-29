@@ -28,6 +28,9 @@ ol{
     margin-bottom: 40px;
     font-weight: bold;
 }
-.active{
-background-color: orange;
-}
+nav ul li{
+
+    display: flex;
+    justify-content: space-between;
+    
+    }
