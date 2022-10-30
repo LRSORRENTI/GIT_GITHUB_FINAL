@@ -57,7 +57,7 @@
                 </li>
                 <li>
                   <a class="dropdown-item" href="/index4.html"
-                    >Commits / Git Ignore / Git Docs</a
+                    >Commits / Git Ignore / Merging</a
                   >
                 </li>
                 <li>
@@ -111,215 +111,239 @@
         </div>
       </div>
     </nav>
-    <h2>Undoing changing and time-traveling in Git</h2>
-    <h3>
-      This next section is a motley crue of git commands, we'll be going over a
-      few commands you may not use everyday
-    </h3>
-    <h3>
-      Critical:
+    <div class="container">
+      <h2>Undoing changing and time-traveling in Git</h2>
+      <p>
+        This next section is a motley crue of git commands, we'll be going over
+        a few commands you may not use everyday
+      </p>
+    </div>
+    <div class="container">
+      <p>Critical:</p>
       <ul>
         <li>Checking out commits</li>
         <li>"Escaping detached HEAD"</li>
       </ul>
-    </h3>
-    <h3>
-      Important:
+    </div>
+    <div class="container">
+      <p>Important:</p>
       <ul>
         <li>Discarding changes with checkout</li>
         <li>Git restore</li>
         <li>Git reset</li>
         <li>Git revert</li>
       </ul>
-    </h3>
-    <h2>Checking out old commits</h2>
-    <h3>
-      We're going to go back to git checkout, we can use git checkout to look at
-      a specific commit hash with the command: git checkout + hashnumhere, git
-      checkout d8194d6
-    </h3>
-    <h3>
-      After entering the above, a message appears: "You are in a 'detached head'
-      state, you can look around, make experimental changes, and commit them,
-      and discard any commits you make in this state, without impacting any
-      branches by switching back to a branch
-    </h3>
-    <h3>
-      After entering git checkout 37ed289, we now only see 4 commits, versus the
-      10 or so commits when we first did git log --oneline inside our repo, we
-      traveled back in time.
-    </h3>
-    <h3>
-      Head usually points to the branch reference, and the branch reference
-      points to the most recent commit on the branch, but when we use git
-      checkout plus a hash num, we detach the head from master, and head is now
-      pointing to the specified commit hash num
-    </h3>
+    </div>
+    <div class="container">
+      <h2>Checking out old commits</h2>
+    </div>
+    <div class="container">
+      <p>
+        We're going to go back to git checkout, we can use git checkout to look
+        at a specific commit hash with the command: git checkout + hashnumhere,
+        git checkout d8194d6
+      </p>
+      <p>
+        After entering the above, a message appears: "You are in a 'detached
+        head' state, you can look around, make experimental changes, and commit
+        them, and discard any commits you make in this state, without impacting
+        any branches by switching back to a branch
+      </p>
+      <p>
+        After entering git checkout 37ed289, we now only see 4 commits, versus
+        the 10 or so commits when we first did git log --oneline inside our
+        repo, we traveled back in time.
+      </p>
+      <p>
+        Head usually points to the branch reference, and the branch reference
+        points to the most recent commit on the branch, but when we use git
+        checkout plus a hash num, we detach the head from master, and head is
+        now pointing to the specified commit hash num
+      </p>
+    </div>
+    <div class="container">
+      <h2>Re-attaching our detached head</h2>
+      <p>
+        So in this state we can see and examine the contents of the old commit,
+        we can leave and go back to where we were and re-attach the HEAD, or we
+        could create a new branch, switch to it and make/save changes because
+        after creating and switching branches, our head is also now re-attached.
+      </p>
+      <p>
+        So we saw that we can check out a particular commit using a commit hash.
+        But there's another way in get that we can reference other commits. We
+        can reference things based upon head.
+      </p>
+      <p>
+        The syntax is kind of it's a little weird, but it looks like this head
+        and then a tilde, which is usually above the tab key and then a number.
+        So head tilde one is actually going to refer to whatever commit comes
+        before. Head Think of it as head minus one head. Tilde two it's whatever
+        comes to commits before head the grandparent commit. So if this is where
+        head is, if I check out head. Tilde one It's the previous commit head.
+        Tilde two is this commit three is this one so I don't use this all that
+        often, but sometimes if you have a reason to reference what you did in
+        the last commit and you don't want to go look up that commit hash, you
+        can still very easily reference it with head tilde one So I'll show that
+        very quickly on our master branch. Just take a look.
+      </p>
+    </div>
+    <div class="container">
+      <p>
+        So we've got big in chapter three. That's where we are right now. If I
+        just want to go back one commit, I could copy this. Right, and then
+        check that out or I can do this. Get check out. Head. Tilde one not 21,
+        just one.
+      </p>
+      <p>
+        And once again, we're back to detach Head, because we checked out a
+        particular commit. This is just a different way to reference that
+        commit, right? We just said the previous commit, but it still commit.
+        We're not on a branch and we see that here. Head is now pointing to this
+        commit add headings to all files. So before head was pointing to master
+        which is still pointing to this commit. Now head is one before and what
+        we see in our file we probably won't notice a whole lot, but there's no
+        chapter three. That is the difference. Chapter one and chapter two are
+        here, but chapter three was the next commit. It still exists on Master,
+        of course.
+      </p>
+      <p>
+        So from here, if I want to go back one commit again, I can just do the
+        same command get check out head minus or tilde one because head is now
+        right here. I can still reference one commit prior. And now we go back
+        one one further. So there we are. Head is now here. And we can see we
+        don't have those headings in my files anymore. Chapter two. Chapter one.
+        They used to have a heading up top, and that's kind of all I want to
+        show. I'll switch back to Master now. Get switch, master.
+      </p>
+    </div>
+    <div class="container">
+      <p>
+        And now we have those headings back and we have Chapter three back. So
+        we're back up to date with the Master Branch reference. One other thing
+        that we can do to get back to the branch we were on, so let me try and
+        explain that in a better way. If I check out some commit, I go into
+        detached head. Right now I'm on master, right? So if I check out head
+        Tilde, I don't know. Let's go way back like eight. We're way back here.
+        This commit here. Now, if I want to go back to where I was, I want to
+        leave detached head. One option is to just remember what branch I was
+        on. Master, and go back to Master. Get switch master. The other option
+        is get switch with a dash and that will just take me back to whatever
+        branch I was on last. And that happens to be master. But I could show a
+        different example, right? We have this other branch. I already forgot
+        the name. What is it? Chapter two redo. If we check that out or switch
+        to it. Either one. That's where I was. Now I'm going to go back, get
+        check out head. Let's do Tilde one. So I'm on this branch. I'm going to
+        go back one commit. And now I just want to leave. Detached head. I don't
+        remember what branch I was on or I'm just lazy. I do get switched dash
+        and it takes me back to where I left off. That's all I wanted to show.
+      </p>
+    </div>
+    <div class="container">
+      <h2>Discarding changes with Git Checkout</h2>
+      <p>
+        Okay so colt just made a new repo, with two files: dog.txt and cat.txt,
+        first we initialized the repo, then one by one added 3 commits, all
+        saying: first commit, second, and third, one line at a time
+      </p>
+      <p>
+        This is to demonstrate how we could use git checkout to revert changes
+        or discard changes back to an earlier version of a file
+      </p>
+      <p>We can do this with the command: git checkout HEAD file-name</p>
+      <p>In our example it would be: git checkout HEAD dog.txt</p>
+      <p>
+        We're telling git take the contents of dog.txt at HEAD, and get rid
+        of/discard the changes we made.
+      </p>
+      <p>
+        And yes it works, cat.txt and dog.txt were reverted to their original
+        state, the changes I made are gone
+      </p>
+    </div>
+    <div class="container">
+      <p>
+        Another way to do the same thing is with the git command: git checkout
+        -- cat.txt dog.txt
+      </p>
+      <p>
+        So git checkout HEAD dog.txt and git checkout -- dog.txt do the exact
+        same, just different ways of using the same command
+      </p>
+    </div>
+    <div class="container">
+      <h2>Intro to GIT RESTORE command</h2>
+      <p>
+        This is a new command in Git, and it helps us undo operations, keep in
+        mind we just saw git checkout -- filenamehere command discard changes,
+        but git checkout does a ton of different things, which is why git
+        restore was introduced, similar to how git switch was also added as an
+        alternative to git checkout
+      </p>
+      <p>
+        We use git restore to unmodify files, in case you changed and saved a
+        file, but don't want those changes to stay, you can use git restore, be
+        cautioned though, after entering the git restore command, there's no
+        going back, the uncommitted changes are permanently gone, use git
+        restore with utmost certainty you want to discard changes made.
+      </p>
+      <p>
+        And yes git restore does work, after entering the command, all the
+        changes I made are gone, and the file is back to the state in which I
+        made the last commit
+      </p>
+    </div>
+    <div class="container">
+      <p>
+        Now remember this command has the exact same result as git checkout HEAD
+        dog.txt, it's just simpler
+      </p>
+      <p>
+        We could also go back further in our commit history with this command:
+        git restore --source HEAD ~2 dog.txt
+      </p>
+      <p>
+        the ~2 or ~num is specifying how many commits to go back, we could go
+        back 3 commits with ~3
+      </p>
+    </div>
+    <div class="container">
+      <h2>Second use of git restore</h2>
+      <p>
+        We can also utilize git restore to remove files from the staging area,
+        if you accidentally use git add on a file by mistake we use the
+        following command: git restore --staged file-name
+      </p>
 
-    <h2>Re-attaching our detached head</h2>
-    <h3>
-      So in this state we can see and examine the contents of the old commit, we
-      can leave and go back to where we were and re-attach the HEAD, or we could
-      create a new branch, switch to it and make/save changes because after
-      creating and switching branches, our head is also now re-attached.
-    </h3>
-    <h3>
-      So we saw that we can check out a particular commit using a commit hash.
-      But there's another way in get that we can reference other commits. We can
-      reference things based upon head.
-    </h3>
-    <h3>
-      The syntax is kind of it's a little weird, but it looks like this head and
-      then a tilde, which is usually above the tab key and then a number. So
-      head tilde one is actually going to refer to whatever commit comes before.
-      Head Think of it as head minus one head. Tilde two it's whatever comes to
-      commits before head the grandparent commit. So if this is where head is,
-      if I check out head. Tilde one It's the previous commit head. Tilde two is
-      this commit three is this one so I don't use this all that often, but
-      sometimes if you have a reason to reference what you did in the last
-      commit and you don't want to go look up that commit hash, you can still
-      very easily reference it with head tilde one So I'll show that very
-      quickly on our master branch. Just take a look.
-    </h3>
-    <h3>
-      So we've got big in chapter three. That's where we are right now. If I
-      just want to go back one commit, I could copy this. Right, and then check
-      that out or I can do this. Get check out. Head. Tilde one not 21, just
-      one.
-    </h3>
-    <h3>
-      And once again, we're back to detach Head, because we checked out a
-      particular commit. This is just a different way to reference that commit,
-      right? We just said the previous commit, but it still commit. We're not on
-      a branch and we see that here. Head is now pointing to this commit add
-      headings to all files. So before head was pointing to master which is
-      still pointing to this commit. Now head is one before and what we see in
-      our file we probably won't notice a whole lot, but there's no chapter
-      three. That is the difference. Chapter one and chapter two are here, but
-      chapter three was the next commit. It still exists on Master, of course.
-    </h3>
-    <h3>
-      So from here, if I want to go back one commit again, I can just do the
-      same command get check out head minus or tilde one because head is now
-      right here. I can still reference one commit prior. And now we go back one
-      one further. So there we are. Head is now here. And we can see we don't
-      have those headings in my files anymore. Chapter two. Chapter one. They
-      used to have a heading up top, and that's kind of all I want to show. I'll
-      switch back to Master now. Get switch, master.
-    </h3>
-    <h3>
-      And now we have those headings back and we have Chapter three back. So
-      we're back up to date with the Master Branch reference. One other thing
-      that we can do to get back to the branch we were on, so let me try and
-      explain that in a better way. If I check out some commit, I go into
-      detached head. Right now I'm on master, right? So if I check out head
-      Tilde, I don't know. Let's go way back like eight. We're way back here.
-      This commit here. Now, if I want to go back to where I was, I want to
-      leave detached head. One option is to just remember what branch I was on.
-      Master, and go back to Master. Get switch master. The other option is get
-      switch with a dash and that will just take me back to whatever branch I
-      was on last. And that happens to be master. But I could show a different
-      example, right? We have this other branch. I already forgot the name. What
-      is it? Chapter two redo. If we check that out or switch to it. Either one.
-      That's where I was. Now I'm going to go back, get check out head. Let's do
-      Tilde one. So I'm on this branch. I'm going to go back one commit. And now
-      I just want to leave. Detached head. I don't remember what branch I was on
-      or I'm just lazy. I do get switched dash and it takes me back to where I
-      left off. That's all I wanted to show.
-    </h3>
-    <h2>Discarding changes with Git Checkout</h2>
-    <h3>
-      Okay so colt just made a new repo, with two files: dog.txt and cat.txt,
-      first we initialized the repo, then one by one added 3 commits, all
-      saying: first commit, second, and third, one line at a time
-    </h3>
-    <h3>
-      This is to demonstrate how we could use git checkout to revert changes or
-      discard changes back to an earlier version of a file
-    </h3>
-    <h3>We can do this with the command: git checkout HEAD file-name</h3>
-    <h3>In our example it would be: git checkout HEAD dog.txt</h3>
-    <h3>
-      We're telling git take the contents of dog.txt at HEAD, and get rid
-      of/discard the changes we made.
-    </h3>
-    <h3>
-      And yes it works, cat.txt and dog.txt were reverted to their original
-      state, the changes I made are gone
-    </h3>
-    <h3>
-      Another way to do the same thing is with the git command: git checkout --
-      cat.txt dog.txt
-    </h3>
-    <h3>
-      So git checkout HEAD dog.txt and git checkout -- dog.txt do the exact
-      same, just different ways of using the same command
-    </h3>
-    <h2>Intro to GIT RESTORE command</h2>
-    <h3>
-      This is a new command in Git, and it helps us undo operations, keep in
-      mind we just saw git checkout -- filenamehere command discard changes, but
-      git checkout does a ton of different things, which is why git restore was
-      introduced, similar to how git switch was also added as an alternative to
-      git checkout
-    </h3>
-    <h3>
-      We use git restore to unmodify files, in case you changed and saved a
-      file, but don't want those changes to stay, you can use git restore, be
-      cautioned though, after entering the git restore command, there's no going
-      back, the uncommitted changes are permanently gone, use git restore with
-      utmost certainty you want to discard changes made.
-    </h3>
-    <h3>
-      And yes git restore does work, after entering the command, all the changes
-      I made are gone, and the file is back to the state in which I made the
-      last commit
-    </h3>
-    <h3>
-      Now remember this command has the exact same result as git checkout HEAD
-      dog.txt, it's just simpler
-    </h3>
-    <h3>
-      We could also go back further in our commit history with this command: git
-      restore --source HEAD ~2 dog.txt
-    </h3>
-    <h3>
-      the ~2 or ~num is specifying how many commits to go back, we could go back
-      3 commits with ~3
-    </h3>
-    <h2>Second use of git restore</h2>
-    <h3>
-      We can also utilize git restore to remove files from the staging area, if
-      you accidentally use git add on a file by mistake we use the following
-      command: git restore --staged file-name
-    </h3>
-
-    <h3>
-      So in summary we can use git restore filename to discard changes, and we
-      use git restore --staged file-name to unstage an added fike
-    </h3>
-    <h2>Undoing commits with git reset command</h2>
-    <h3>
-      So in case we want to undo a commit, we can use git reset git-hash-num to
-      undo them, be warned though, after entering the commits are gone
-    </h3>
-    <h2>Intro to git revert</h2>
-    <h3>
-      Another similar sounding command, that also will undo changes, except git
-      revert hashnum, will leave a trace of the deletion, when we use git
-      reset/restore, those commits are gone without any evidence of deletion,
-      but git revert will leave evidence of the deletion, the history is
-      preserved.
-    </h3>
-    <h3>
-      This is useful when working on a team, using git reset causes problems
-      when working with others, they may need to see the commit that was
-      deleted, which is why using git revert instead is best practice
-    </h3>
-    <h3>
-      Okay just finished the git restore/revert exercise, got through it okay,
-      seems easy enough
-    </h3>
+      <p>
+        So in summary we can use git restore filename to discard changes, and we
+        use git restore --staged file-name to unstage an added fike
+      </p>
+      <h2>Undoing commits with git reset command</h2>
+      <p>
+        So in case we want to undo a commit, we can use git reset git-hash-num
+        to undo them, be warned though, after entering the commits are gone
+      </p>
+    </div>
+    <div class="container">
+      <h2>Intro to git revert</h2>
+      <p>
+        Another similar sounding command, that also will undo changes, except
+        git revert hashnum, will leave a trace of the deletion, when we use git
+        reset/restore, those commits are gone without any evidence of deletion,
+        but git revert will leave evidence of the deletion, the history is
+        preserved.
+      </p>
+      <p>
+        This is useful when working on a team, using git reset causes problems
+        when working with others, they may need to see the commit that was
+        deleted, which is why using git revert instead is best practice
+      </p>
+      <p>
+        Okay just finished the git restore/revert exercise, got through it okay,
+        seems easy enough
+      </p>
+    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
       integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"

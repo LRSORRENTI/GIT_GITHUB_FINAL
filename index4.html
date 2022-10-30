@@ -33,7 +33,7 @@
                   <li><a class="dropdown-item" href="/index.html">Home</a></li>
                   <li><a class="dropdown-item" href="/index2.html">Intro To Git</a></li>
                   <li><a class="dropdown-item" href="/index3.html">Git Installation & Setup</a></li>
-                  <li><a class="dropdown-item active opacity-75" href="/index4.html">Commits / Git Ignore / Git Docs</a></li>
+                  <li><a class="dropdown-item active opacity-75" href="/index4.html">Commits / Git Ignore / Merging</a></li>
                   <li><a class="dropdown-item" href="/index5.html">Git Diff & Git Stash</a></li>
                   <li><a class="dropdown-item" href="/index6.html">Undoing Changes / Time-Traveling</a></li>
                   <li><a class="dropdown-item" href="/index7.html">Intro To GitHub</a></li>
@@ -611,25 +611,30 @@
     <h2>===================</h2>
     <h2>MERGING BRANCHES</h2>
     <h2>===================</h2>
+    <div class="container">
     <h3>
         In this section we'll see how we merge branches, and there are 
         different types of merges, here's an overview of each section 
         based on importance.
     </h3>
-    <h2> Critical importance:
+    </div>
+    <div class="container">
+    <h2> Critical importance:</h2>
         <ul>
             <li>Fast Forward Merges</li>
             <li>Git Merge and Merge commit commands</li>
             <li>Resolving merge conflicts</li>
         </ul>
-    </h2>
-    <h2> Nice to know but not critical:
+    </div>
+    <div class="container">
+    <h2> Nice to know but not critical:</h2>
         <ul>
             <li>
     Using VsCode to resolve conflicts
             </li>
         </ul>
-    </h2>
+    </div>
+    <div class="container">
     <h3>
         Now let's get into it, how do we merge branches, an essential 
         thing we must learn, to do this we use the git merge command
@@ -653,13 +658,19 @@
         as yourself, then maybe you'll merge branches at some 
         point.
     </h3>
-    
+    </div>
+    <div class="container">
     <h3>
         Remember we merge branches themselves, not commits, and we always merge 
         to the current HEAD branch
     </h3>
+    </div>
+    <div class="container">
     <h3>
         When we want to merge, we follow these steps:
+        </h3>
+    </div>
+    <div class="container">
         <ol>
             <li>
                 Switch into the branch you'd like to merge the changes 
@@ -672,9 +683,13 @@
     
        </li>
         </ol>
+        </div>
+        
+        <div class="container">
+        <h2>
     So it's essentially: git switch into the branch you want to merge changes 
     into, then once inside the selected branch, use git merge bugfix or git merge + 
-    branch name we want to merge into master
+    branch name we want to merge into master</h2>
     </h3>
     <h3>Okay so it does work, going to merge into master again</h3>
     <h2>
@@ -693,6 +708,8 @@
         to do this automatically for us, we will need to resolve these conflicts.
     
     </h3>
+</div>
+<div class="container">
     <h3>
         The easier way of doing this is through VsCode since it has a handy 
         dandy input that'll display when merge conflicts arise, we could also 
@@ -706,6 +723,7 @@
         without conflicts, and generated a conflicted merge and resolved it.
     
     </h3>
+    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
       integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
