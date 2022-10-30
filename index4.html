@@ -23,7 +23,7 @@
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+                <a class="nav-link" aria-current="page" href="/index.html">Home</a>
               </li>
              <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -33,7 +33,7 @@
                   <li><a class="dropdown-item" href="/index.html">Home</a></li>
                   <li><a class="dropdown-item" href="/index2.html">Intro To Git</a></li>
                   <li><a class="dropdown-item" href="/index3.html">Git Installation & Setup</a></li>
-                  <li><a class="dropdown-item active opacity-75" href="/index4.html">Commits / Git Ignore / Git Docs</a></li>
+                  <li><a class="dropdown-item active opacity-75" href="/index4.html">Commits / Git Ignore / Merging</a></li>
                   <li><a class="dropdown-item" href="/index5.html">Git Diff & Git Stash</a></li>
                   <li><a class="dropdown-item" href="/index6.html">Undoing Changes / Time-Traveling</a></li>
                   <li><a class="dropdown-item" href="/index7.html">Intro To GitHub</a></li>
@@ -52,7 +52,7 @@
         </div>
       </nav>
     <div class="container">
-    <h2 class="mb-4 d-flex justify-content-center">Commits in more detail</h2>
+    <h2 class="mb-4 d-flex justify-content-center"><u>Commits in more detail</u></h2>
     <h2 class="mb-4 d-flex justify-content-center">In the next section we're going to go over the following:</h2>
     
     <ul class="mb-4">
@@ -65,7 +65,7 @@
     </ul>
     
     
-    <h2 class="mb-4 d-flex justify-content-center">ATOMIC COMMITS</h2>
+    <h2 class="mb-4 d-flex justify-content-center"><u>ATOMIC COMMITS</u></h2>
     <h2 class="mb-4 d-flex justify-content-center">It's common advice to keep your commits atomic, what does 
         atomic mean? It means keeping each commit focused on a single
         change. Commit after each individual change to 
@@ -82,14 +82,14 @@
         seems a little pedantic but I suppose if an employer prefers
         one or the other go with that.
     </h2>
-    <h2 class="mb-4 d-flex justify-content-center">A closer look at Git Log command</h2>
+    <h2 class="mb-4 d-flex justify-content-center"><u>A closer look at Git Log command</u></h2>
     <h2 class="mb-4 d-flex justify-content-center">We can use the "git log --oneline" to show a concise
         version of our log. This is useful and we'll go over shortly
         why it's so important. In essence it makes it easier to see
         when we need to time travel back to, which commit needs to 
         be gone back to.
     </h2>
-    <h2 class="mb-4 d-flex justify-content-center">Commiting with a GUI like GitKraken</h2>
+    <h2 class="mb-4 d-flex justify-content-center"><u>Commiting with a GUI like GitKraken</u></h2>
     <h2 class="mb-4 d-flex justify-content-center">Even if you're not interested in using a GUI, learning
         about commits in GUI's are important, worth checking out. They
         help with visualizing commits.
@@ -116,12 +116,12 @@
     <h2 class="mb-4 d-flex justify-content-center">Okay so this --amend isn't working for me, I'm getting an 
         error message saying:
         <h2 class="mb-4 d-flex justify-content-center">unknown option: --amend
-        usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
-                   [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+        usage: git [--version] [--help] [-C < path>] [-c < name>=< value>]
+                   [--exec-path[=< path>]] [--html-path] [--man-path] [--info-path]
                    [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
-                   [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
-                   [--super-prefix=<path>] [--config-env=<name>=<envvar>]
-                   <command> [<args>]
+                   [--git-dir=< path>] [--work-tree=< path>] [--namespace=< name>]
+                   [--super-prefix=< path>] [--config-env=< name>=< envvar>]
+                   < command> [< args>]
                    </h2>
                    <h2 class="mb-4 d-flex justify-content-center">
                    Will come back to this later to see what I'm doing wrong
@@ -185,65 +185,65 @@
                 behind the scenes
              </h2>
 
-             <h2>==========================</h2>
-             <h2><u>INTRODUCING BRANCHES</u></h2>
-             <h2>==========================</h2>
-             <h3>Every commit has a unique hash, and each commit references 
+             <h2  class= "mb-4 d-flex justify-content-center">====================</h2>
+             <h2 class= "mb-4 d-flex justify-content-center"><u>INTRODUCING BRANCHES</u></h2>
+             <h2  class= "mb-4 d-flex justify-content-center">====================</h2>
+             <h3 class="mb-4">Every commit has a unique hash, and each commit references 
                 the commit that came before it. There is a linear history, but 
                 in the real world we need to work in multiple contexts simultaneously 
                 
              </h3>
-             <h3>So imagine I'm working, I don't know, I work at some company, I'm working on a web application and
+             <h3 class="mb-4">So imagine I'm working, I don't know, I work at some company, I'm working on a web application and
                 I'm trying out two different color scheme variations for a website.
                  And I want to try them both out and figure out which one I like best.
                  And at the same time, I also have been tasked with trying to fix a really horrible bug.
-                 <h3>
+                 <h3 class="mb-4">
                    But this bug is proving very difficult to solve 
                 I'm actually needing to delete some code and comment stuff out, move stuff around to try and hunt down
                 the bug.
                 So it's not as simple as just fixing a typo.
                 I have to like totally destroy part of the code base to find this bug.
                 </h3>
-                <h3>
+                <h3 class="mb-4">
                  And at the same time, one of my teammates is working on adding a new feature, a little chat bot and
                  the bottom corner.
                  You know, those things that pop up and you can chat with customer service or something.
                  It's not clear at the moment if our company wants to use that, but he's going ahead and trying it as
                  a bit of an experiment.
                  </h3>
-                 <h3>
+                 <h3 class="mb-4">
                  And then another coworker is adding some new functionality to the search bar autocomplete, and yet
                  another developer is doing something very different.
                  She is doing a very experimental radical design overhaul of our entire application layout, but it won't
                   be presented until next month and we don't even know if any of it will be used after next month.
                   So lots of different contexts.
                   </h3>
-                  <h3>
+                  <h3 class="mb-4">
                  If we all worked in a linear fashion, one commit after the next, this would be practically impossible.
                  How could we be working on separate things, some of which break other people's code?
                 Right.
                 If I'm trying to fix a horrible bug and deleting a bunch of code, removing files, I'm just making
                 a mess.
                 </h3>
-                <h3>
+                <h3 class="mb-4">
                 That's going to be a big problem if somebody else is trying to add a new feature.
                 Likewise, if someone is doing a radical experimental design change on every single view of our application,
                 everything changes.
                 </h3>
-                <h3>
+                <h3 class="mb-4">
                 But I'm trying to work on some minor color scheme variations, or if someone's working on adding a chat
                 widget to the bottom right of our screen.
                 Those things need to happen in separate contexts because they have implications on one another and they
                 really need to happen in isolation until maybe at some point we decide to incorporate changes into each
                 other's contexts.
                 </h3>
-                <h3>
+                <h3 class="mb-4">
                 So that is where branching comes in.
                  That's exactly what git branches allow us to do.
                  Branches are a signature feature of Git and you can kind of think of them as alternative timelines for
                  a project.
                  </h3>
-                 <h3>
+                 <h3 class="mb-4">
                 They allow us to create separate contexts whenever we want.
                 We can try new things.
                 We can work on multiple ideas in parallel.
@@ -251,49 +251,49 @@
                 on other branches, although we can decide to then combine branches, we call that merging and we'll
                 learn how to do that.
                 </h3>
-                <h3>
+                <h3 class="mb-4">
                 But that's something we have to decide to do.
                 Otherwise, if we make a change in one branch, the other branches do not know about it.
                 They exist in isolation.
                 So this allows me to make a commit and maybe make another commit on one branch and then at any point
                 splinter off and try something on this pink branch up top.
                 </h3>
-                <h3>
+                <h3 class="mb-4">
                 I'm calling New Color Scheme.
                 I could try a new color scheme out, but over here, if I switch back to this branch, none of that
                 code comes with me.
                 None of those new commits.
                 So I could branch off again and work on a bug fix.
                 </h3>
-                <h3>
+                <h3 class="mb-4">
                 But again, totally separate context.
                 And then I could branch off even further from this bug fix branch and branch further to do an experimental
                 redesign.
                 So now I have at least four different contexts one, two, three and four.
                 </h3>
-                <h3>
+                <h3 class="mb-4">
                 And this means that I could be working on this and maybe somebody else is working on this branch and
                 somebody else is working here or.
                 Maybe someone else is working on this purply bluish branch in the middle and working on things plotting
                 ahead.
                 </h3>
-                <h3>
+                <h3 class="mb-4">
             Well, I'm still stuck here.
                  We're all working in separate contexts, but then a very important part is being able to then combine
                 and merge branches together when appropriate.
                 </h3>
-                <h3>
+                <h3 class="mb-4">
                 If you work on a bug fix and you actually solve it, then you want to merge that bug fix into the main
                 code base or into another branch.
                 So we'll learn how to do all of this in time.
                 </h3>
-                <h3>
+                <h3 class="mb-4">
                 But I'm going to stop talking for now.
                 In this video, I just wanted to introduce this idea of branching, of having separate contexts.
             </h3>
-            <h2>=================================</h2>
-            <h2><u>THE MASTER BRANCH/MAIN BRANCH</u></h2>
-            <h2>=================================</h2>
+            <h2 class="mb-4 d-flex justify-content-center">=================================</h2>
+            <h2 class="mb-4 d-flex justify-content-center"><u>THE MASTER BRANCH/MAIN BRANCH</u></h2>
+            <h2 class="mb-4 d-flex justify-content-center">=================================</h2>
     
             <h3>
                 So we're always by default on the master branch,
@@ -329,9 +329,9 @@
                 or keep it as a separate branch while maybe eventually merging back
             </h3>
     
-             <h2>==========================</h2>
-             <h2>What is HEAD?</h2>
-             <h2>==========================</h2>
+             <h2 class="mb-4 d-flex justify-content-center">=============</h2>
+             <h2 class="mb-4 d-flex justify-content-center">What is HEAD?</h2>
+             <h2 class="mb-4 d-flex justify-content-center">=============</h2>
              <h3>Let's explore what (HEAD -> master) is</h3>
              <h3>HEAD is a pointer in Git, that refers to the current 
                 location in your repository, it points to a specific, 
@@ -611,25 +611,30 @@
     <h2>===================</h2>
     <h2>MERGING BRANCHES</h2>
     <h2>===================</h2>
+    <div class="container">
     <h3>
         In this section we'll see how we merge branches, and there are 
         different types of merges, here's an overview of each section 
         based on importance.
     </h3>
-    <h2> Critical importance:
+    </div>
+    <div class="container">
+    <h2> Critical importance:</h2>
         <ul>
             <li>Fast Forward Merges</li>
             <li>Git Merge and Merge commit commands</li>
             <li>Resolving merge conflicts</li>
         </ul>
-    </h2>
-    <h2> Nice to know but not critical:
+    </div>
+    <div class="container">
+    <h2> Nice to know but not critical:</h2>
         <ul>
             <li>
     Using VsCode to resolve conflicts
             </li>
         </ul>
-    </h2>
+    </div>
+    <div class="container">
     <h3>
         Now let's get into it, how do we merge branches, an essential 
         thing we must learn, to do this we use the git merge command
@@ -653,13 +658,19 @@
         as yourself, then maybe you'll merge branches at some 
         point.
     </h3>
-    
+    </div>
+    <div class="container">
     <h3>
         Remember we merge branches themselves, not commits, and we always merge 
         to the current HEAD branch
     </h3>
+    </div>
+    <div class="container">
     <h3>
         When we want to merge, we follow these steps:
+        </h3>
+    </div>
+    <div class="container">
         <ol>
             <li>
                 Switch into the branch you'd like to merge the changes 
@@ -672,9 +683,13 @@
     
        </li>
         </ol>
+        </div>
+        
+        <div class="container">
+        <h2>
     So it's essentially: git switch into the branch you want to merge changes 
     into, then once inside the selected branch, use git merge bugfix or git merge + 
-    branch name we want to merge into master
+    branch name we want to merge into master</h2>
     </h3>
     <h3>Okay so it does work, going to merge into master again</h3>
     <h2>
@@ -693,6 +708,8 @@
         to do this automatically for us, we will need to resolve these conflicts.
     
     </h3>
+</div>
+<div class="container">
     <h3>
         The easier way of doing this is through VsCode since it has a handy 
         dandy input that'll display when merge conflicts arise, we could also 
@@ -706,6 +723,7 @@
         without conflicts, and generated a conflicted merge and resolved it.
     
     </h3>
+    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
       integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
