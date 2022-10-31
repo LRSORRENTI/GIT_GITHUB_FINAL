@@ -115,47 +115,59 @@
         </div>
       </div>
     </nav>
-    <h2>GIT TAGS: Marking important moments in history</h2>
+    <div class="container">
+      <h2 class="display-4">GIT TAGS: Marking important moments in history</h2>
+    </div>
+    <div class="container">
+      <h3>
+        Now git tags themselves aren't used all the time, it depends on the
+        project/company you're working with, or just your personal habits
+      </h3>
+      <h3>
+        Most often these days tags are used to mark different releases or
+        versions of a given project like: version 2.0 or version 3.2 etc..
+      </h3>
 
-    <h3>
-      Now git tags themselves aren't used all the time, it depends on the
-      project/company you're working with, or just your personal habits
-    </h3>
-    <h3>
-      Most often these days tags are used to mark different releases or versions
-      of a given project like: version 2.0 or version 3.2 etc..
-    </h3>
-    <h3>
-      Important:
+      <h3>Important:</h3>
+    </div>
+    <div class="container">
       <ul>
         <li>Understanding git tags</li>
         <li>Viewing tags</li>
         <li>Lightweight vs Annotated tags</li>
         <li>Pushing tags</li>
       </ul>
-      Nice to have:
+    </div>
+    <div class="container">
+      <h3>Nice to have:</h3>
+    </div>
+    <div class="container">
       <ul>
         <li>Semantic versioning</li>
         <li>Moving tags</li>
         <li>Deleting tags</li>
         <li>Diffing tags</li>
       </ul>
-    </h3>
-
-    <h3>The idea behind Git Tags</h3>
-    <h3>
-      Tags are pointers that refer to particular points in Git history, we can
-      mark a particular moment with a git tag. Tags are most often used to mark
-      version releases in projects: (v4.1.0 or v4.1.1 etc..)
-    </h3>
-    <h3>
-      Think of tags as branch references that don't change, once a tag is
-      created, it always refers to the same commit, it's just a label for a
-      commit
-    </h3>
-
-    <h3>
-      The two types of tags:
+    </div>
+    <div class="container">
+      <h3 class="display-4">The idea behind Git Tags</h3>
+    </div>
+    <div class="container">
+      <h3>
+        Tags are pointers that refer to particular points in Git history, we can
+        mark a particular moment with a git tag. Tags are most often used to
+        mark version releases in projects: (v4.1.0 or v4.1.1 etc..)
+      </h3>
+      <h3>
+        Think of tags as branch references that don't change, once a tag is
+        created, it always refers to the same commit, it's just a label for a
+        commit
+      </h3>
+    </div>
+    <div class="container">
+      <h2 class="display-4">The two types of tags:</h2>
+    </div>
+    <div class="container">
       <ul>
         <li>
           Lightweight tags: these tags are... lightweight, they're just a
@@ -167,144 +179,183 @@
           a commit message
         </li>
       </ul>
-    </h3>
-    <h3>But first let's go over 'versioning'</h3>
-    <h3>
-      Semantic versioning spec outlines a standardized versioning system for
-      software releases, it provides a consistent way for developers to give
-      meaning to their software releases (how big of a change is this release??)
-    </h3>
-    <h3>
-      Versions always consist of 3 numbers separated by periods, version 1.0.0
-      or version 1.3.0, version 2.4.1 etc...
-    </h3>
-    <h3>
-      2.4.1 The first number in the sequence denotes major releases (2), The
-      second number denotes minor releases(4) and the last number denotes patch
-      releases(1)
-    </h3>
+    </div>
+    <div class="container">
+      <h3 class="display-4">But first let's go over 'versioning'</h3>
+    </div>
+    <div class="container">
+      <h3>
+        Semantic versioning spec outlines a standardized versioning system for
+        software releases, it provides a consistent way for developers to give
+        meaning to their software releases (how big of a change is this
+        release??)
+      </h3>
+      <h3>
+        Versions always consist of 3 numbers separated by periods, version 1.0.0
+        or version 1.3.0, version 2.4.1 etc...
+      </h3>
+      <h3>
+        2.4.1 The first number in the sequence denotes major releases (2), The
+        second number denotes minor releases(4) and the last number denotes
+        patch releases(1)
+      </h3>
 
-    <h3>
-      The initial release is typically always 1.0.0, version 1.0.0 defines the
-      public API, then with the first patch release it becomes version 1.0.1,
-      and minor releases become 1.1.1
-    </h3>
-    The first number is reserved for major releases, version 1.3.5 now becomes
-    2.0.0, or version 3.5.1 becomes version 4.0.0, these are significant changes
-    that are no longer backwards compatible, features have been changed
-    substantially or removed completely
-    <h3>
-      The second number denotes new features or functionality that was added to
-      the project, but the project is still backwards compatible, no breaking
-      changes, the new functionality is optional and should not force users to
-      rewrite their own code
-    </h3>
-    <h3>
-      The last number denotes patch releases, these typically don't contain
-      significant changes, huge new features, but usually include bug fixes, and
-      other changes that don't impact how the code is used
-    </h3>
-    <h3>
-      This is very important when you may be using a certain library, or peice
-      of software as a depedency for your own software you're building
-    </h3>
-    <h3>
-      Take bootstrap for CSS, if we go to github we can view the tagged releases
-      of bootstrap over time, like bootstrap version 4.5.1, then above it is
-      bootstrap version 4.5.2, and each version has notes describing what's
-      changed in the new version
-    </h3>
-    <h3>
-      React has similar tags like react version 16.10.0 , react version 16.13.0,
-      17.0.1
-    </h3>
-    <h3>That's the idea behind Semantic versioning</h3>
+      <h3>
+        The initial release is typically always 1.0.0, version 1.0.0 defines the
+        public API, then with the first patch release it becomes version 1.0.1,
+        and minor releases become 1.1.1
+      </h3>
+      <h3>
+        The first number is reserved for major releases, version 1.3.5 now
+        becomes 2.0.0, or version 3.5.1 becomes version 4.0.0, these are
+        significant changes that are no longer backwards compatible, features
+        have been changed substantially or removed completely
+      </h3>
+      <h3>
+        The second number denotes new features or functionality that was added
+        to the project, but the project is still backwards compatible, no
+        breaking changes, the new functionality is optional and should not force
+        users to rewrite their own code
+      </h3>
+      <h3>
+        The last number denotes patch releases, these typically don't contain
+        significant changes, huge new features, but usually include bug fixes,
+        and other changes that don't impact how the code is used
+      </h3>
+      <h3>
+        This is very important when you may be using a certain library, or peice
+        of software as a depedency for your own software you're building
+      </h3>
+      <h3>
+        Take bootstrap for CSS, if we go to github we can view the tagged
+        releases of bootstrap over time, like bootstrap version 4.5.1, then
+        above it is bootstrap version 4.5.2, and each version has notes
+        describing what's changed in the new version
+      </h3>
+      <h3>
+        React has similar tags like react version 16.10.0 , react version
+        16.13.0, 17.0.1
+      </h3>
+    </div>
+    <div class="container">
+      <h3 class="display-4">That's the idea behind Semantic versioning</h3>
+    </div>
+    <div class="container">
+      <h2 class="display-4">Viewing and searching tags</h2>
+    </div>
+    <div class="container">
+      <h3>
+        If we type: git tag, in a given repo, it will print a list of all the
+        tags in the current repo
+      </h3>
+      <h3>
+        If we clone the REACT github repo, then inside type git tag, it displays
+        a long list of tags, v1.0.0 all the way to v17.0.1
+      </h3>
+      <h3>
+        We can also search for tags that match a particular pattern using the:
+        git tag -l "*beta*"(git tag + lowercase L + all tags that include 'beta'
+        in their name)
+      </h3>
+      <h3>
+        If we type git tag -1 "v17*", all the tags that begin with v17 will be
+        displayed
+      </h3>
+    </div>
+    <div class="container">
+      <h2 class="display-4">Comparing tags with git diff</h2>
+    </div>
+    <div class="container">
+      <h3>
+        We can also checkout tags using git checkout tagname, to view the state
+        of a repo at that tag point, this puts us in detached HEAD!
+      </h3>
+      <h3>
+        If we type git checkout 15.3.1, we will go into detached HEAD, where we
+        can do some experimenting, create a new experimental branch off of this
+        specific commit , like git switch -c " BRANCH_FROM_TAG_15.3.1"
+      </h3>
+      <h3>
+        We could diff betwwen tags to see the difference between them, like git
+        diff v17.0.0 v17.0.1, which would display all the changes made in the
+        v17.0.1 patch, we can even do this to compare major changes, like git
+        diff v.15.0.0 v.17.0.0, this would display a huge list of differences
+      </h3>
+    </div>
+    <div class="container">
+      <h2 class="display-4">Creating lightweight tags</h2>
+    </div>
+    <div class="container">
+      <h3>
+        To create a lightweight tag, we enter: git tag tagname, this will create
+        a tag referring to the commit the HEAD is referencing, like git tag
+        v17.0.4, this will create the tag v17.0.4
+      </h3>
+    </div>
+    <div class="container">
+      <h2 class="display-4">Annotated tags</h2>
+    </div>
+    <div class="container">
+      <h3>
+        We can use annotated tags to create a new tag but with annotated we can
+        append a message to our tag, similar to a commit message, git tag -a
+        tagname, this will open vscode to ask for a message to add to the tag,
+        we can also use the '-m' flag to write a message on the command line
+        instead of using our editor
+      </h3>
+      <h3>
+        Now to view the tag message, we use the command: git show tagname, so
+        git show v17.0.1, this will display the message that was appended to the
+        specified tag
+      </h3>
+    </div>
+    <div class="container">
+      <h2 class="display-4">Tagging previous commits</h2>
+    </div>
+    <div class="container">
+      <h3>
+        We can tag older commits with the following command: git tag tagname
+        commithash, git tag v1.0.1 67e841982, on the commit that has 67e841982
+        as it's hash id, a tag is created, v1.0.1
+      </h3>
+    </div>
+    <div class="container">
+      <h2 class="display-4">Replacing tags with git force</h2>
+    </div>
+    <div class="container">
+      <h3>
+        We can use the '-f ' flag to force our tag through, git will yell at us
+        if we reuse a tag that's already referring to a commit, git tag -f
+        tagname
+      </h3>
+      <h3>
+        This is useful if we accidentally tag the wrong commit hash, but we must
+        include the '-f' otherwise git will throw 'fatal error message'
+      </h3>
+    </div>
+    <div class="container">
+      <h2 class="display-4">Deleting tags</h2>
+    </div>
+    <div class="container">
+      <h3>We can delete tags using the command: git tag -d tagname</h3>
+      <h3>So if we type git tag -d v1.0.2, that tag will be deleted</h3>
+    </div>
+    <div class="container">
+      <h2 class="display-4">Pushing tags (IMPORTANT)</h2>
+    </div>
+    <div class="container">
+      <h3>
+        By default, the git push command doesn't transfer tags to remote
+        servers, if you have many tags you want to push up at once, you need to
+        use this command: git push --tags, this will transfer all your tags to
+        the remote server
+      </h3>
 
-    <h2>Viewing and searching tags</h2>
-    <h3>
-      If we type: git tag, in a given repo, it will print a list of all the tags
-      in the current repo
-    </h3>
-    <h3>
-      If we clone the REACT github repo, then inside type git tag, it displays a
-      long list of tags, v1.0.0 all the way to v17.0.1
-    </h3>
-    <h3>
-      We can also search for tags that match a particular pattern using the: git
-      tag -l "*beta*"(git tag + lowercase L + all tags that include 'beta' in
-      their name)
-    </h3>
-    <h3>
-      If we type git tag -1 "v17*", all the tags that begin with v17 will be
-      displayed
-    </h3>
-    <h2>Comparing tags with git diff</h2>
-    <h3>
-      We can also checkout tags using git checkout tagname, to view the state of
-      a repo at that tag point, this puts us in detached HEAD!
-    </h3>
-    <h3>
-      If we type git checkout 15.3.1, we will go into detached HEAD, where we
-      can do some experimenting, create a new experimental branch off of this
-      specific commit , like git switch -c " BRANCH_FROM_TAG_15.3.1"
-    </h3>
-    <h3>
-      We could diff betwwen tags to see the difference between them, like git
-      diff v17.0.0 v17.0.1, which would display all the changes made in the
-      v17.0.1 patch, we can even do this to compare major changes, like git diff
-      v.15.0.0 v.17.0.0, this would display a huge list of differences
-    </h3>
-    <h2>Creating lightweight tags</h2>
-    <h3>
-      To create a lightweight tag, we enter: git tag tagname, this will create a
-      tag referring to the commit the HEAD is referencing, like git tag v17.0.4,
-      this will create the tag v17.0.4
-    </h3>
-    <h2>Annotated tags</h2>
-    <h3>
-      We can use annotated tags to create a new tag but with annotated we can
-      append a message to our tag, similar to a commit message, git tag -a
-      tagname, this will open vscode to ask for a message to add to the tag, we
-      can also use the '-m' flag to write a message on the command line instead
-      of using our editor
-    </h3>
-    <h3>
-      Now to view the tag message, we use the command: git show tagname, so git
-      show v17.0.1, this will display the message that was appended to the
-      specified tag
-    </h3>
-
-    <h2>Tagging previous commits</h2>
-    <h3>
-      We can tag older commits with the following command: git tag tagname
-      commithash, git tag v1.0.1 67e841982, on the commit that has 67e841982 as
-      it's hash id, a tag is created, v1.0.1
-    </h3>
-    <h2>Replacing tags with git force</h2>
-    <h3>
-      We can use the '-f ' flag to force our tag through, git will yell at us if
-      we reuse a tag that's already referring to a commit, git tag -f tagname
-    </h3>
-    <h3>
-      This is useful if we accidentally tag the wrong commit hash, but we must
-      include the '-f' otherwise git will throw 'fatal error message'
-    </h3>
-    <h2>Deleting tags</h2>
-    <h3>We can delete tags using the command: git tag -d tagname</h3>
-    <h3>So if we type git tag -d v1.0.2, that tag will be deleted</h3>
-
-    <h2>Pushing tags (IMPORTANT)</h2>
-    <h3>
-      By default, the git push command doesn't transfer tags to remote servers,
-      if you have many tags you want to push up at once, you need to use this
-      command: git push --tags, this will transfer all your tags to the remote
-      server
-    </h3>
-
-    <h3>
-      Or to push a single tag the command is: git push origin tagname, git push
-      origin v1.1.3, v.1.1.3 will be pushed
-    </h3>
+      <h3>
+        Or to push a single tag the command is: git push origin tagname, git
+        push origin v1.1.3, v.1.1.3 will be pushed
+      </h3>
+    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
       integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"

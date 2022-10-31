@@ -115,17 +115,25 @@
         </div>
       </div>
     </nav>
-    <h2>Writing custom git aliases</h2>
+    <div class="container">
+    <h2 class="display-4">Writing custom git aliases</h2>
+    </div>
+    <div class="container">
     <h3>
       There's two things we'll go over:
+      </h3>
+      <div class="container">
       <ul>
         <li>How we write custom aliases.</li>
         <li>The global config file (ie where we store them)</li>
       </ul>
+      <h3>
       Some folks love using aliases since they're like shortcuts, custom
       commands you can write, so you don't need to type out full lengthy git
       commands
-    </h3>
+      </h3>
+    </div>
+    <div class="container">
 
     <h3>
       But before we dive in to writing git aliases, let's quickly go over the
@@ -159,10 +167,13 @@
       But we can also do this by opening the hidden global git config file, we
       can print it out with: cat ~/.gitconfig
     </h3>
-
+</div>
+<div class="container">
     <h3>
       $ cat ~/.gitconfig [filter "lfs"] smudge = git-lfs smudge -- %f process =
+      <br>
       git-lfs filter-process required = true clean = git-lfs clean -- %f [user]
+      <br>
       name = Luke Sorrenti email = lrsorrenti@hotmail.com [core] editor = code
       --wait
     </h3>
@@ -181,26 +192,31 @@
     </h3>
 
     <h3>
-      We can set this up in our gitconfig file in VSCODE by adding: [alias] s =
-      status, after saving, everytime we type 'git s' the status log will
+      We can set this up in our gitconfig file in VSCODE by adding: 
+      <br>
+      [alias] s = status, after saving, everytime we type 'git s' the status log will
       display, we created a shortcut, an alias
     </h3>
 
     <h3>
-      We could also do this in the command line itself with the command: git
-      config --global alias.s status, the same thing will be achieved as above
+      We could also do this in the command line itself with the command: <br>
+       git config --global alias.s status <br>
+        the same thing will be achieved as above
       where we configured our 's' alias to display status as a shortcut, 'git s'
       is the same as 'git status'
     </h3>
-
-    <h2>Aliases with arguments</h2>
+</div>
+<div class="container">
+    <h2 class="display-4">Aliases with arguments</h2>
     <h3>
       For example, we could set 'git add' to be 'git a', followed by two
       arguments. [alias] a = add file1 file2 file3, so we could do 'git a
       README.md index.html'
     </h3>
     <h3>Aliases are automatically passed through after you call it</h3>
-    <h2>Exploring existing and useful git aliases online</h2>
+    </div>
+    <div class="container">
+    <h2 class="display-4">Exploring existing and useful git aliases online</h2>
     <h3>
       There are tons of custom git aliases we can search for and use, pre-built
       aliases we can copy paste into our command line, aliases that can update
@@ -215,7 +231,7 @@
       That's it for the course, going to clean all this up, and set these notes
       up in such a way that I can easily navigate between sections
     </h2>
-
+</div>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
       integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"

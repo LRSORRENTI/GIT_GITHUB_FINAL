@@ -51,13 +51,21 @@
           </div>
         </div>
       </nav>
-    <h2>
+      <div class="container">
+    <h2 class="display-4 d-flex justify-content-center">
         REBASING, THE SCARIEST GIT COMMAND?
     </h2>
+    </div>
+    <div class="container">
     <h3>
         What really matters in this section:
     </h3>
+
+    
     <h3>Important:
+        </h3>
+        </div>
+        <div class="container">
         <ul>
             <li>
                 Rebasing VS. Merging (Two ways of integrating changes
@@ -71,8 +79,9 @@
                 to as the 'GOLDEN RULE' of rebasing)
             </li>
         </ul>
-    </h3>
-    <h2>
+</div>
+<div class="container">
+    <h2 class="display-4">
         Why do we rebase?
     </h2>
     <h3>
@@ -86,7 +95,8 @@
         two main ways to use the git rebase command:
        
     </h3>
-    <h3>
+</div>
+<div class="container">
         <ul>
             <li>
                 USE REBASING AS A CLEANUP TOOL
@@ -95,11 +105,12 @@
                 USE REBASING AS AN ALTERNATIVE TO MERGING
             </li>
         </ul>
-    </h3>
-    <h2>
+    </div>
+    <h2 class="display-4">
         Comparing MERGING & REBASING
     </h2>
-    <h3>
+    <div class="container">
+        <h3>
         Let's look at the 'problem' with rebasing, let's pretend 
         we're working on a project with 10 other developers,
         and we're all collaborating on a big codebase together
@@ -127,7 +138,11 @@
         <h3>
             This is something rebasing can help with
         </h3>
-        <h2>REBASING!</h2>
+        </div>
+        <div class="container">
+            
+        <h2 class="display-4">REBASING!</h2>
+       
     <h3>
         We can instead rebase the feature branch onto main branch, 
         this moves the entire feature branch so that it BEGINS at 
@@ -154,7 +169,10 @@
         Another way to rebase is to wait until we're fully done with 
         our feature/code then rebase the feature onto main branch
     </h3>
-    <h2>Rebasing in essence</h2>
+    </div>
+    <div class="container">
+    <h2 class="display-4">Rebasing in essence</h2>
+    <div class="container">
     <h3>
         In essence rebasing is used when we want to clean 
         up merge commit history, it creates brand new commits 
@@ -172,7 +190,10 @@
         using git rebase all our commits are in-line and on 
         the tip of main
     </h3>
-    <h2>THE GOLDEN RULE, WHEN NOT TO REBASE</h2>
+    </div>
+    <div class="container">
+    <h2 class="display-4">THE GOLDEN RULE, WHEN NOT TO REBASE</h2>
+    <div class="container">
     <h3>
     Never rebase commits that have been share with others, if 
     you've already pushed commits to GitHub... DO NOT REBASE them 
@@ -188,7 +209,8 @@
         so the workflow looks like this :
        
     </h3>
-    <h3>
+    </div>
+    <div class="container">
         <ol>
             <li>
                 git switch feature
@@ -197,6 +219,9 @@
                 git rebase main
             </li>
         </ol>
+        </div>
+        <div class="container">
+        <h3>
         When we use rebase we ALWAYS type the command from 
         our branch, not anyone elses/main branch, always type 
         git status, check and make sure you're on 
@@ -210,7 +235,9 @@
         etc, after we resolve them, back in the command line 
         we can type: git rebase --continue
     </h3>
-    <h2>
+    </div>
+    <div class="container">
+    <h2 class="display-4">
         Cleaning up with INTERACTIVE REBASE
     </h2>
     <h3>
@@ -222,8 +249,12 @@
     <h3>
         What matters in this section:
        </h3>
+       
     <h3>
     Nice to have:
+    </h3>
+    </div>
+    <div class="container">
     <ul>
         <li>
             Rewording commits
@@ -235,7 +266,8 @@
             Dropping commits
         </li>
     </ul>
-    </h3>
+    </div>
+    <div class="container">
     <h3>
         Sometimes we want to rewrite history, delete, rename, and 
         even reorder commits (before sharing them) using git rebase!
@@ -255,9 +287,10 @@
         Also keep in mind we're rebasing commits based on the 
         HEAD of where they are based
     </h3>
+    </div>
+    <div class="container">
     
-    
-    <h2>Rewording commits with INTERACTIVE REBASE</h2>
+    <h2 class="display-4">Rewording commits with INTERACTIVE REBASE</h2>
     <h3>
         Running git rebase with the '-i' flag will enter the 
         interactive mode, which allows us to edit commits, add files, 
@@ -283,7 +316,8 @@
         As a reminder, when VSCODE opens our interactive rebase, 
         we have a few options to pick:
     </h3>
-    <h3>
+    </div>
+    <div class="container">
         <ul>
             <li>
                 pick - use this commit
@@ -303,7 +337,8 @@
                 drop - remove commit
             </li>
         </ul>
-    </h3>
+    </div>
+    <div class="container">
     <h3>
         Let's see how we can combine commits in our 
         interactive rebase with VSCODE, to do this we can 
@@ -329,6 +364,7 @@
         rebase option: 'drop', using drop will remove the commit 
         entirely. Along with that commits contents. 
     </h3>
+    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
       integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"

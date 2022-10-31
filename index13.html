@@ -51,16 +51,26 @@
           </div>
         </div>
       </nav>
+      <div class="container">
     <h2>
         Git behind the scenes: Hashing & Objects
     </h2>
-    <h3>Important:
+    </div>
+    <div class="container">
+    <h3 class="display-5">Important:
+        </h3>
+        </div>
+        <div class="container">
         <ul>
           <li>
             The local config file
           </li>
         </ul>
+        </div>
+        <h3 class="display-5">
         Nice to have:
+        </h3>
+        <div class="container">
         <ul>
             <li>
                 The 'Ref's' directory
@@ -75,10 +85,13 @@
                 Git objects, blobs, trees, and more!
             </li>
         </ul>
-    </h3>
-    <h2>
+    </div>
+    <div class="container">
+    <h2 class="display-4"> 
         Working with the local config file
     </h2>
+    </div>
+    <div class="container">
     <h3>
         We can change  things in our  config file at a 
         local level, we've seen how we can change settings in 
@@ -104,9 +117,15 @@
         git documentation has a lot of different configuration 
         settings, we could seriously customize our settings
     </h3>
-    <h2>
+    </div>
+    <div class="container">
+
+    
+    <h2 class="display-4">
         Inside Git: The Refs Folder
     </h2>
+    </div>
+    <div class="container">
     <h3>
         This is where you'll find a HEADS directory, refs/heads contains
         one file per branch in a repository, each file is named after 
@@ -121,10 +140,13 @@
         Refs also contains a refs/tags folder which 
         contains one file for each tag in the repo
     </h3>
-    
-    <h2>
+    </div>
+    <div class="container">
+    <h2 class="display-4">
         Inside Git: The HEAD file
     </h2>
+    </div>
+    <div class="container">
     <h3>
         HEAD typically references a branch pointer, but remember
         we can also go into 'detached HEAD' to checkout 
@@ -139,9 +161,13 @@
         Also remember when we use git checkout, HEAD now references 
         that specific commit, main is still pointing at the tip
     </h3>
-    <h2>
+    </div>
+    <div class="container">
+    <h2 class="display-4">
         Inside Git: The OBJECTS Folder
     </h2>
+    </div>
+    <div class="container">
     <h3>
         This is really the 'core' of git, this is where the history 
         of our file is stored, this is where the backups are, 
@@ -156,7 +182,8 @@
     <h3>
         But inside this folder there are four types of git objects:
     </h3>
-    <h3>
+    </div>
+    <div class="container">
         <ul>
             <li>
                 Commits
@@ -169,11 +196,13 @@
             </li>
             Annotated tags
         </ul>
-    </h3>
-    
-    <h2>
+    </div>
+    <div class="container">
+    <h2 class="display-4">
         But first up we need to go over HASHING FUNCTIONS
     </h2>
+    </div>
+    <div class="container">
     <h3>
         On on our git log, we can see the commit hashes, 
         they're forty digits long, hexadecimal, base 16, meaning 
@@ -190,7 +219,8 @@
         You may also hear the term 'Cryptographic Hash Functions', 
         they do the same thing except they:
     </h3>
-    <h3>
+    </div>
+    <div class="container">
         <ol>
             <li>
                 One-way function (which means the output should not give any info about 
@@ -206,7 +236,8 @@
                 Unlikely to find 2 outputs with exact same value
             </li>
         </ol>
-    </h3>
+    </div>
+    <div class="container">
     
     <h3>
         So remember if we input 'I love chickens', if that input 
@@ -240,9 +271,13 @@
         Hashing functions, SHA-1, MD5 (Message-Digest Algorithm), ECDSA (Elliptic Curve Digital 
         Signature Algorithm)
     </h3>
-    <h2>
+    </div>
+    <div class="container">
+    <h2 class="display-4">
         Git as a Key-Value Datastore
     </h2>
+    </div>
+    <div class="container">
     <h3>
         Git database, git is a key-value data store, we can insert
         any kind of content into a Git repository, and Git will 
@@ -258,11 +293,13 @@
         git gives us a 'key' to access that data, that 'key' is 
         our 40 digit SHA-1 hash
     </h3>
-    
-    <h2>
+    </div>
+    <div class="container">
+    <h2 class="display-4">
         Hashing with the Git Hash-Object
     </h2>
-    
+    </div>
+    <div class="container">
     <h3>
         So let's try the command: git hash-object filename
     </h3>
@@ -309,10 +346,13 @@
         commint the starts with 'ce' is inside that directory, inside 
         the objects folder
     </h3>
-    
-    <h2>
+    </div>
+    <div class="container">
+    <h2 class="display-4">
         Retrieving data with: git cat-file
     </h2>
+    </div>
+    <div class="container">
     <h3>
         Now that we have data stored in our git object database, we can try 
         Retrieving that data with the git cat-file command, if we 
@@ -362,9 +402,13 @@
         Remember we haven't committed anything, this data is stored in 
         things called 'blobs'
     </h3>
-    <h2>
+    </div>
+    <div class="container">
+    <h2 class="display-4">
         Deep dive into Git Objects: BLOBS
     </h2>
+    </div>
+    <div class="container">
     <h3>
         Git blobs, blob stands for 'Binary large object', are the 
         object the type Git uses to store the contents of files in a 
@@ -380,9 +424,13 @@
         Every hash from the previous exercise is a BLOB, this leads 
         us into our next section TREES
     </h3>
-    <h2>
+    </div>
+    <div class="container">
+    <h2 class="display-4">
     Deep dive into Git Objects: TREES
     </h2>
+    </div>
+    <div class="container">
     <h3>
         Trees are a git objects used to store the content of 
         a directory, each tree contains pointers that can refer to 
@@ -423,10 +471,13 @@
         git cat-file -t 01f2952e2ffe695935273e314b539670dd664c9a, 
         the output would be blob, '-t' tells us the type
     </h3>
-    <h2>
+    </div>
+    <div class="container">
+    <h2 class="display-4">
         Deep dive into Git Objects: Commits
     </h2>
-    
+    </div>
+    <div class="container">
     <h3>
         So let's go over the underlying structure of commits, commit objects 
         combine a tree object along with information about the context that 
@@ -447,16 +498,29 @@
         git cat-file -p 095aa11, then hit enter the following is 
         displayed:
     </h3>
+    </div>
+    <div class="container">
     <h3>
         $ git cat-file -p 095aa11
+        </h3>
+        <h3>
     tree 76bc86554f0233b71c414bd40cb9dc37743a83a7
+    </h3>
+    <h3>
     parent aae2db5a0ed65265440b31f742a903c0d37ba415
+    </h3>
+    <h3>
     author Luke Sorrenti <lrsorrenti@hotmail.com> 1664369148 -0500
+    </h3>
+    <h3>
     committer Luke Sorrenti <lrsorrenti@hotmail.com> 1664369148 -0500
-    
+    </h3>
+    <h3>
     added intro to git objects: commits
     
     </h3>
+    </div>
+    <div class="container">
     <h3>
         And we can also verify the above's type if we type:
         git cat-file -t, the '-t' is short for type, so we're asking 
@@ -464,6 +528,7 @@
         above, gitbash will display: commit, but if it was a tree, the 
         '-t' flag would display: tree
         </h3>
+        </div>
     <script
     src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
