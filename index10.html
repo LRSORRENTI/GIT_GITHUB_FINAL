@@ -118,8 +118,8 @@
     <h2>Git collaboration workflows</h2>
 
     <h3>What matters in this section:</h3>
-    <h3>
-      Critical:
+    <h3 class="display-4">Critical:</h3>
+    <div class="container">
       <ul>
         <li>The problems with working on a single branch</li>
         <li>Feature branch workflow</li>
@@ -127,73 +127,77 @@
         <li>Forking</li>
         <li>Fork and clone workflow</li>
       </ul>
-    </h3>
-    <h3>
-      Important:
-      <ul>
-        <li>Branch protection rules</li>
-      </ul>
-    </h3>
+    </div>
+    <h3 class="display-4">Important:</h3>
+    <ul>
+      <li>Branch protection rules</li>
+    </ul>
 
-    <h2>Centralized Workflow, what is it?</h2>
-    <h3>
-      Centralized workflow is when everyone works on master/main, it's the
-      simplest workflow to have everyone work on a single branch, it's
-      straightforward but has quite a lot of shortcomings!
-    </h3>
+    <h2 class="display-4">Centralized Workflow, what is it?</h2>
+    <div class="container">
+      <h3>
+        Centralized workflow is when everyone works on master/main, it's the
+        simplest workflow to have everyone work on a single branch, it's
+        straightforward but has quite a lot of shortcomings!
+      </h3>
 
-    <h3>
-      Let's look at an example, we have 3 collaborators: Pamela, David, and
-      Forrest.
-    </h3>
-    <h3>
-      All three of them clone the main/master branch of the github repo to their
-      local machines
-    </h3>
-    <h3>
-      Forrest works on a new feature all day, adding and committing all day
-      long, let's say he has 2 total commits on the master branch, so he then
-      pushes it up to GitHub
-    </h3>
-    <h3>
-      Pamela has also been working on a new feature, as she's been working
-      Forrest pushed some code up, but now Pamela's done and wants to push her
-      code up
-    </h3>
-    <h3>
-      So she tries git push and the following error message is displayed:
-      'Failed to push. Updates were rejected because the tip of your current
-      branch is behind it's remote counterpart. Merge the remote changes (e.g.
-      'gitpull') before pushing again
-    </h3>
-    <h3>
-      So she does that, she uses git pull to get the changes from the origin
-      master. Forrest's work must be merged in. Hopefully this goes smoothly!
-      There may be conflicts, there may not be. But she has to do it in order to
-      push back up to master/main.
-    </h3>
-    <h3>
-      Now during all of this, David is working on a new feature but is having
-      some doubts, he'd like to share his commits with the rest of the team to
-      start a discussion, he's made a lot of changes and things aren't working
-      properly, so he wants to discuss with the team.
-    </h3>
+      <h3>
+        Let's look at an example, we have 3 collaborators: Pamela, David, and
+        Forrest.
+      </h3>
+      <h3>
+        All three of them clone the main/master branch of the github repo to
+        their local machines
+      </h3>
+      <h3>
+        Forrest works on a new feature all day, adding and committing all day
+        long, let's say he has 2 total commits on the master branch, so he then
+        pushes it up to GitHub
+      </h3>
+      <h3>
+        Pamela has also been working on a new feature, as she's been working
+        Forrest pushed some code up, but now Pamela's done and wants to push her
+        code up
+      </h3>
+      <h3>
+        So she tries git push and the following error message is displayed:
+        'Failed to push. Updates were rejected because the tip of your current
+        branch is behind it's remote counterpart. Merge the remote changes (e.g.
+        'gitpull') before pushing again
+      </h3>
+      <h3>
+        So she does that, she uses git pull to get the changes from the origin
+        master. Forrest's work must be merged in. Hopefully this goes smoothly!
+        There may be conflicts, there may not be. But she has to do it in order
+        to push back up to master/main.
+      </h3>
+      <h3>
+        Now during all of this, David is working on a new feature but is having
+        some doubts, he'd like to share his commits with the rest of the team to
+        start a discussion, he's made a lot of changes and things aren't working
+        properly, so he wants to discuss with the team.
+      </h3>
 
-    <h3>
-      David can't simply push his code up to share it, Pamela tried that as well
-      and needed to pull Forrests changes down first, merge those changes and
-      then push
-    </h3>
-    <h3>
-      Before he can even share his incomplete/problematic code, he needs to pull
-      and merge from GitHub, then push his work up. THEN everyone can pull his
-      work down, and he may have broken the codebase if this actually happens,
-      depending on how problematic his code is
-    </h3>
-    <h2>The problem:</h2>
-    <h3>
-      While it's nice and easy to only work on a single branch, this leads to
-      serious issues when working on a team!
+      <h3>
+        David can't simply push his code up to share it, Pamela tried that as
+        well and needed to pull Forrests changes down first, merge those changes
+        and then push
+      </h3>
+      <h3>
+        Before he can even share his incomplete/problematic code, he needs to
+        pull and merge from GitHub, then push his work up. THEN everyone can
+        pull his work down, and he may have broken the codebase if this actually
+        happens, depending on how problematic his code is
+      </h3>
+    </div>
+    <h2 class="display-4">The problem:</h2>
+    <div class="container">
+      <h3>
+        While it's nice and easy to only work on a single branch, this leads to
+        serious issues when working on a team!
+      </h3>
+    </div>
+    <div class="container">
       <ul>
         <li>
           Lot's of time spent resolving conflicts and merging code, especially
@@ -209,21 +213,26 @@
           broken codebase
         </li>
       </ul>
-    </h3>
-    <h2>Colt's Centralized worlflow demonstration</h2>
-    <h3>
-      Colt just did a demo of why branching is important, if we work on a team
-      of many different collaborators, having all of them working, making
-      changes to, and pushing on the same branch is a huge headache. Which is
-      why we dont't work on the master/main branch, enter FEATURE BRANCHES
-    </h3>
-    <h2>FEATURE BRANCHES</h2>
-
-    <h3>
-      Never work directly on master/main, all work/new development needs to be
-      done on separate branches!
-    </h3>
-    <h3>
+    </div>
+    <div class="container">
+      <h2 class="display-4">Colt's Centralized worlflow demonstration</h2>
+    </div>
+    <div class="container">
+      <h3>
+        Colt just did a demo of why branching is important, if we work on a team
+        of many different collaborators, having all of them working, making
+        changes to, and pushing on the same branch is a huge headache. Which is
+        why we dont't work on the master/main branch, enter FEATURE BRANCHES
+      </h3>
+    </div>
+    <h2 class="display-4">FEATURE BRANCHES</h2>
+    <div class="container">
+      <h3>
+        Never work directly on master/main, all work/new development needs to be
+        done on separate branches!
+      </h3>
+    </div>
+    <div class="container">
       <ul>
         <li>Treat the master/main branch as the official project history</li>
         <li>
@@ -236,38 +245,43 @@
           won't until someone messes it up)
         </li>
       </ul>
-    </h3>
-    <h3>
-      Just created a FEATURE branch, going to leave my main/master branch alone,
-      then merge the branch, going to get in the habit of only working on a
-      feature branch
-    </h3>
-    <h3>
-      Also keep in mind when working on a project, merging into master/main
-      requires a code review, merging into the main branch will always need
-      approval
-    </h3>
-    <h3>
-      In conclusion, feature branches are the way to go, makes working on a team
-      much easier, and less prone to ruining codebases
-    </h3>
-    <h3>
-      Also keep in mind, we name our feature branch after what we're working on,
-      like navbar branch, dark-mode branch, amazing-new-visuals branch. We name
-      the feature branch after the task/thing we're working on
-    </h3>
-    <h3>
-      Also keep in mind we won't always be pushing our feature branches to
-      github, a lot of the time our feature branches will stay local. If you
-      look at a companies github, there not going to have thousands and
-      thousands of branches that their developers pushed up.
-    </h3>
-    <h2>Merging in feature branches</h2>
-    <h3>
-      At some point the work done on the feature branches will need to be merged
-      to main/master. There are a few ways to do this:
-    </h3>
-    <h3>
+    </div>
+    <div class="container">
+      <h3>
+        Just created a FEATURE branch, going to leave my main/master branch
+        alone, then merge the branch, going to get in the habit of only working
+        on a feature branch
+      </h3>
+      <h3>
+        Also keep in mind when working on a project, merging into master/main
+        requires a code review, merging into the main branch will always need
+        approval
+      </h3>
+      <h3>
+        In conclusion, feature branches are the way to go, makes working on a
+        team much easier, and less prone to ruining codebases
+      </h3>
+      <h3>
+        Also keep in mind, we name our feature branch after what we're working
+        on, like navbar branch, dark-mode branch, amazing-new-visuals branch. We
+        name the feature branch after the task/thing we're working on
+      </h3>
+      <h3>
+        Also keep in mind we won't always be pushing our feature branches to
+        github, a lot of the time our feature branches will stay local. If you
+        look at a companies github, there not going to have thousands and
+        thousands of branches that their developers pushed up.
+      </h3>
+    </div>
+
+    <h2 class="display-4">Merging in feature branches</h2>
+    <div class="container">
+      <h3>
+        At some point the work done on the feature branches will need to be
+        merged to main/master. There are a few ways to do this:
+      </h3>
+    </div>
+    <div class="container">
       <ol>
         <li>
           Merge at will, without any discussion with teammates, JUST DO WHATEVER
@@ -279,24 +293,31 @@
         </li>
         <li>PULL REQUESTS!</li>
       </ol>
-    </h3>
-    <h2>PULL REQUESTS</h2>
-    <h3>
-      Pull requests are a feature built in to Github, they are NOT native to Git
-      itself
-    </h3>
-    <h3>
-      They allow developers to alert team members to new work that needs to be
-      reviewed, they provide a mechanism to approve or reject the work on a
-      given branch, they also help facilitate discussion and feedback on the
-      specified commits
-    </h3>
-    <h3>
-      "I have new stuff I want to merge into main branch, what does everyone
-      think about it?"
-    </h3>
-    <h2>THE WORKFLOW:</h2>
-    <h3>
+    </div>
+    <div class="container">
+      <h2 class="display-4">PULL REQUESTS</h2>
+    </div>
+    <div class="container">
+      <h3>
+        Pull requests are a feature built in to Github, they are NOT native to
+        Git itself
+      </h3>
+
+      <h3>
+        They allow developers to alert team members to new work that needs to be
+        reviewed, they provide a mechanism to approve or reject the work on a
+        given branch, they also help facilitate discussion and feedback on the
+        specified commits
+      </h3>
+      <h3>
+        "I have new stuff I want to merge into main branch, what does everyone
+        think about it?"
+      </h3>
+    </div>
+    <div class="container">
+      <h2 class="display-4">THE WORKFLOW:</h2>
+    </div>
+    <div class="container">
       <ol>
         <li>Do some work locally on a feature branch</li>
         <li>Push up our feature branch to Github</li>
@@ -309,135 +330,159 @@
           also this step depends on the team structure
         </li>
       </ol>
-    </h3>
-    <h3>
-      In a lot of companies, the main branch is protected, you can't just merge
-      anything in, you need to make a pull request, so there's an opportunity to
-      review your code and discuss
-    </h3>
-    <h3>
-      When we open a pull request, we need to add some comments as to why we're
-      issuing the PR, concise info as to what it is and why
-    </h3>
-    <h3>
-      Then your boss can leave a comment saying: 'Hey this is on the right track
-      but I think x, y, and z need to be fixed here and here', then you could
-      write a comment saying 'thanks, sounds good I'll get to work fixing x, y,
-      and z
-    </h3>
-    <h3>
-      But eventually, and hopefully the boss decides I can merge my changes in,
-      then the boss can decide to merge your pull request into main or whatever
-      base branch
-    </h3>
-    <h3>
-      Also note we make pull requests to whichever branch we want to merge in to
-      it doesn't necessarily have to be main
-    </h3>
-    <h3>
-      Also note that not every pull request can be merged automatically, just
-      like not every merge on git is a fast-forward, there may be conflicts
-    </h3>
+    </div>
+    <div class="container">
+      <h3>
+        In a lot of companies, the main branch is protected, you can't just
+        merge anything in, you need to make a pull request, so there's an
+        opportunity to review your code and discuss
+      </h3>
+      <h3>
+        When we open a pull request, we need to add some comments as to why
+        we're issuing the PR, concise info as to what it is and why
+      </h3>
+      <h3>
+        Then your boss can leave a comment saying: 'Hey this is on the right
+        track but I think x, y, and z need to be fixed here and here', then you
+        could write a comment saying 'thanks, sounds good I'll get to work
+        fixing x, y, and z
+      </h3>
+      <h3>
+        But eventually, and hopefully the boss decides I can merge my changes
+        in, then the boss can decide to merge your pull request into main or
+        whatever base branch
+      </h3>
+      <h3>
+        Also note we make pull requests to whichever branch we want to merge in
+        to it doesn't necessarily have to be main
+      </h3>
+      <h3>
+        Also note that not every pull request can be merged automatically, just
+        like not every merge on git is a fast-forward, there may be conflicts
+      </h3>
 
-    <h2>Merging Pull Requests With Conflicts</h2>
-    <h3>
-      So that last demo, our PR merge was successful with a single click, there
-      weren't any conflicts, we can fix the conflicts in the command line, or
-      use Github's interactive editor
-    </h3>
-    <h2>Configuring branch protection rules</h2>
-    <h3>
-      If we go into settings on Github, under branches we can add a branch
-      protection rule
-    </h3>
-    <h3>
-      We also see the input field 'Branch name pattern', sometimes different
-      places will have rules for the bramch name pattern itself
-    </h3>
-    <h3>
-      On this page we can select the option 'Require pull request reviews before
-      merging', so that the merge to main will always need approval beforehand,
-      there's also numerous other options to select in the branch protection
-      rules.
-    </h3>
-    <h2>FORK & CLONE: Another Workflow</h2>
-    <h3>
-      The 'fork & clone' workflow is different from anything, we've seen so far,
-      instead of just one centralized Github repo, every dev has their own repo
-      in addition to the "main" repo. Developers make changes and push to their
-      own forks before making pull requests
-    </h3>
-    <h3>
-      It's very commonly used on large open-source projects where there may be
-      thousands of contributors with only a handful of maintainers
-    </h3>
-    <h2>FORKING:</h2>
-    <h3>
-      Github allow us to create personal copies of other peoples' repositories,
-      we call these copies a "fork", of the original
-    </h3>
-    <h3>
-      When we fork a repo, we're basically asking Github: "Make my own copy of
-      this repo please"
-    </h3>
-    <h3>
-      As with pull requests, forking is not a git feature, forking is
-      implemented by GitHub
-    </h3>
-    <h3>
-      Forking a repo is a good way to experiment with a codebase, because once
-      we fork, that copy is ours, we can change stuff, break code, rebuild
-      stuff, the entire copy is ours to mess with, we can clone, push, pull
-      etc.. from the fork
-    </h3>
-    <h2>FORKING DEMO</h2>
-    <h3>
-      So the nice thing about forking vs cloning, when we clone a repo, we CAN'T
-      push any changes up, we don't have permission, but with forking we can!
-      Because after forking that copy is ours!
-    </h3>
-    <h3>
-      Also keep in mind we can use git clone after forking ourselves a copy,
-      that way our remote is set up automatically, so the basic fork workflow
-      would be: fork the given repo, then clone to local machine so our remotes
-      are set up and we can push our changes to the forked copy
-    </h3>
-    <h2>THE FORK AND CLONE WORKFLOW</h2>
-    <h3>
-      So we forked a repo, then cloned it to our local machine, so that copy is
-      ours. We can change it, break it, push changes to github since we set up
-      the remote automatically after using git clone
-    </h3>
-    <h3>
-      Also Github will display how many commits ahead we are of the original
-      copy, so if we wanted to submit a pull request, let's say we added a cool
-      feature that doesn't break anything, we can send the owner of the original
-      repo a pull request from our fork, we should only do this if we're
-      confident that our change could be beneficial and won't break anything
-    </h3>
-    <h3>
-      That's the basis of the fork/clone workflow, you fork an open-source repo,
-      clone it down, make or fix a small feature and push it back up to our copy
-      of the repo, then submit a pull request if you think your changes work and
-      won't break anything
-    </h3>
-    <h3>
-      So remember, when we clone a repo from our Github, we automatically have a
-      remote called origin, because cloning always auto sets up the remote
-    </h3>
-    <h3>
-      BUT we can also set up a second remote, this remote we'll call it
-      'upstream', so we can have a place we can pull changes down from the
-      original non-forked repo, let's say the main repo had some significant
-      changes made, we can now pull those changes down using our upstream remote
-    </h3>
+      <h2>Merging Pull Requests With Conflicts</h2>
+      <h3>
+        So that last demo, our PR merge was successful with a single click,
+        there weren't any conflicts, we can fix the conflicts in the command
+        line, or use Github's interactive editor
+      </h3>
+    </div>
+    <h2 class="display-4">Configuring branch protection rules</h2>
+    <div class="container">
+      <h3>
+        If we go into settings on Github, under branches we can add a branch
+        protection rule
+      </h3>
+      <h3>
+        We also see the input field 'Branch name pattern', sometimes different
+        places will have rules for the bramch name pattern itself
+      </h3>
+      <h3>
+        On this page we can select the option 'Require pull request reviews
+        before merging', so that the merge to main will always need approval
+        beforehand, there's also numerous other options to select in the branch
+        protection rules.
+      </h3>
+    </div>
+    <div class="container">
+      <h2 class="display-4">FORK & CLONE: Another Workflow</h2>
+    </div>
+    <div class="container">
+      <h3>
+        The 'fork & clone' workflow is different from anything, we've seen so
+        far, instead of just one centralized Github repo, every dev has their
+        own repo in addition to the "main" repo. Developers make changes and
+        push to their own forks before making pull requests
+      </h3>
+      <h3>
+        It's very commonly used on large open-source projects where there may be
+        thousands of contributors with only a handful of maintainers
+      </h3>
+    </div>
+    <div class="container">
+      <h2 class="display-4">FORKING:</h2>
+    </div>
+    <div class="container">
+      <h3>
+        Github allow us to create personal copies of other peoples'
+        repositories, we call these copies a "fork", of the original
+      </h3>
+      <h3>
+        When we fork a repo, we're basically asking Github: "Make my own copy of
+        this repo please"
+      </h3>
+      <h3>
+        As with pull requests, forking is not a git feature, forking is
+        implemented by GitHub
+      </h3>
+      <h3>
+        Forking a repo is a good way to experiment with a codebase, because once
+        we fork, that copy is ours, we can change stuff, break code, rebuild
+        stuff, the entire copy is ours to mess with, we can clone, push, pull
+        etc.. from the fork
+      </h3>
+    </div>
+    <div class="container">
+      <h2 class="display-4">FORKING DEMO</h2>
+    </div>
+    <div class="container">
+      <h3>
+        So the nice thing about forking vs cloning, when we clone a repo, we
+        CAN'T push any changes up, we don't have permission, but with forking we
+        can! Because after forking that copy is ours!
+      </h3>
+      <h3>
+        Also keep in mind we can use git clone after forking ourselves a copy,
+        that way our remote is set up automatically, so the basic fork workflow
+        would be: fork the given repo, then clone to local machine so our
+        remotes are set up and we can push our changes to the forked copy
+      </h3>
+    </div>
+    <div class="container">
+      <h2 class="display-4">THE FORK AND CLONE WORKFLOW</h2>
+    </div>
+    <div class="container">
+      <h3>
+        So we forked a repo, then cloned it to our local machine, so that copy
+        is ours. We can change it, break it, push changes to github since we set
+        up the remote automatically after using git clone
+      </h3>
+      <h3>
+        Also Github will display how many commits ahead we are of the original
+        copy, so if we wanted to submit a pull request, let's say we added a
+        cool feature that doesn't break anything, we can send the owner of the
+        original repo a pull request from our fork, we should only do this if
+        we're confident that our change could be beneficial and won't break
+        anything
+      </h3>
+      <h3>
+        That's the basis of the fork/clone workflow, you fork an open-source
+        repo, clone it down, make or fix a small feature and push it back up to
+        our copy of the repo, then submit a pull request if you think your
+        changes work and won't break anything
+      </h3>
+      <h3>
+        So remember, when we clone a repo from our Github, we automatically have
+        a remote called origin, because cloning always auto sets up the remote
+      </h3>
+      <h3>
+        BUT we can also set up a second remote, this remote we'll call it
+        'upstream', so we can have a place we can pull changes down from the
+        original non-forked repo, let's say the main repo had some significant
+        changes made, we can now pull those changes down using our upstream
+        remote
+      </h3>
 
-    <h3>
-      Remember we only push to our fork, using the origin remote, and we use the
-      upstream remote to pull changes down from the original repo
-    </h3>
-    <h3>So the cycle looks like this:</h3>
-    <h3>
+      <h3>
+        Remember we only push to our fork, using the origin remote, and we use
+        the upstream remote to pull changes down from the original repo
+      </h3>
+    </div>
+    <div class="container">
+      <h3>So the cycle looks like this:</h3>
+    </div>
+    <div class="container">
       <ol>
         <li>Fork repo</li>
         <li>Clone repo</li>
@@ -447,12 +492,14 @@
           Create pull request if our changes help and don't break anything
         </li>
       </ol>
-    </h3>
-    <h3>
-      Also to this is how to set up the upstream remote for pulling changes
-      down:
-    </h3>
-    <h3>
+    </div>
+    <div class="container">
+      <h3>
+        Also to this is how to set up the upstream remote for pulling changes
+        down:
+      </h3>
+    </div>
+    <div class="container">
       <ol>
         <li>Go to original repo, clone HTTPS code link</li>
         <li>
@@ -465,11 +512,13 @@
           changes down from the original repo called upstream
         </li>
       </ol>
-    </h3>
-    <h3>
-      So remember if we want to pull down whatever changes were made on the
-      original repo we type: git pull upstream main
-    </h3>
+    </div>
+    <div class="container">
+      <h3>
+        So remember if we want to pull down whatever changes were made on the
+        original repo we type: git pull upstream main
+      </h3>
+    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
       integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
